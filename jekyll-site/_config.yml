@@ -1,0 +1,17 @@
+title: FTTT Static Clone
+url: ""
+markdown: kramdown
+permalink: /:name:/
+
+# Exclude directories and files from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .git
+  - .gitignore
+  - README.md
+  - convert_to_jekyll.py
+  - fallback_build.py
+  - requirements.txt

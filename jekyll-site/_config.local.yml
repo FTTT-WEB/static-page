@@ -1,0 +1,5 @@
+# Local development configuration
+# Use with: bundle exec jekyll build --config _config.yml,_config.local.yml
+# This configuration has an empty baseurl for local development
+
+baseurl: ""

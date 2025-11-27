@@ -1,0 +1,8 @@
+source 'https://rubygems.org'
+
+# For local development
+gem 'jekyll', '~> 4.3'
+gem 'webrick', '~> 1.7'
+
+# For GitHub Pages deployment (use only when deploying)
+# gem 'github-pages', group: :jekyll_plugins

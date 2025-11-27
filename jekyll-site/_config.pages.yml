@@ -1,0 +1,5 @@
+# GitHub Pages configuration
+# Use with: bundle exec jekyll build --config _config.yml,_config.pages.yml
+# This configuration sets baseurl to /static-page for GitHub Pages subdirectory deployment
+
+baseurl: /static-page
