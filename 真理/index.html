@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>真理 – 臺灣福音工作全時間訓練網站 - 臺灣福音工作全時間訓練網站</title>
+  <!-- CSS - Using baseurl-prefixed paths for GitHub Pages -->
+  <link rel="stylesheet" href="/static-page/assets/theme/style32d4.css">
+  <link rel="stylesheet" href="/static-page/assets/theme/genericons/genericons3d36.css">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Roboto', 'Merriweather', Arial, sans-serif;
+      color: #333;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    a {
+      color: #b54434;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: #8b3426;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .site-title,
+    .site-description {
+      position: absolute;
+      clip: rect(1px, 1px, 1px, 1px);
+    }
+
+    /* =============== HEADER STYLES =============== */
+    #masthead {
+      background-color: #fff;
+      padding: 15px 0;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      position: relative;
+      z-index: 100;
+      width: 100%;
+    }
+
+    .header-wrap {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 15px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .site-branding {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex: 0 1 auto;
+      min-width: 0;
+    }
+
+    .site-branding img {
+      max-height: 50px;
+      width: auto;
+      flex-shrink: 0;
+    }
+
+    .site-branding h1 {
+      margin: 0;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 1.2;
+      word-break: break-word;
+    }
+
+    .site-branding a {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+
+    /* =============== NAVIGATION STYLES =============== */
+    #site-navigation {
+      flex: 1 1 100%;
+      width: 100%;
+      order: 3;
+    }
+
+    .main-navigation ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0;
+      background-color: #fafafa;
+      border-top: 1px solid #eee;
+    }
+
+    .main-navigation>ul>li {
+      position: relative;
+      flex: 0 0 auto;
+      border-right: 1px solid #eee;
+    }
+
+    .main-navigation>ul>li:last-child {
+      border-right: none;
+    }
+
+    .main-navigation a {
+      display: block;
+      padding: 12px 14px;
+      text-decoration: none;
+      color: #333;
+      font-size: 14px;
+      transition: all 0.3s ease;
+      white-space: nowrap;
+    }
+
+    .main-navigation a:hover {
+      background-color: #b54434;
+      color: #fff;
+    }
+
+    .main-navigation .sub-menu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #fff;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      min-width: 200px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+      z-index: 1000;
+      border: 1px solid #eee;
+    }
+
+    .main-navigation li:hover>.sub-menu {
+      display: block;
+    }
+
+    .main-navigation .sub-menu li {
+      border-bottom: 1px solid #eee;
+    }
+
+    .main-navigation .sub-menu li:last-child {
+      border-bottom: none;
+    }
+
+    .main-navigation .sub-menu a {
+      padding: 12px 20px;
+      color: #333;
+      white-space: normal;
+    }
+
+    /* =============== CONTENT STYLES =============== */
+    #content {
+      background-color: #EAEAEA;
+      padding: 30px 0;
+      width: 100%;
+    }
+
+    .inner-wrap {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 15px;
+    }
+
+    .site-main {
+      background-color: #fff;
+      padding: 25px;
+      border-radius: 4px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+
+    .entry-content {
+      line-height: 1.8;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+    }
+
+    .entry-content h2 {
+      color: #b54434;
+      margin: 30px 0 15px 0;
+      font-size: 22px;
+      border-bottom: 2px solid #b54434;
+      padding-bottom: 10px;
+      line-height: 1.3;
+    }
+
+    .entry-content h3 {
+      color: #666;
+      margin: 20px 0 10px 0;
+      font-size: 18px;
+      line-height: 1.3;
+    }
+
+    .entry-content h4 {
+      color: #888;
+      margin: 15px 0 8px 0;
+      font-size: 16px;
+    }
+
+    .entry-content p {
+      margin: 0 0 15px 0;
+    }
+
+    .entry-content iframe {
+      max-width: 100%;
+      width: 100%;
+      height: auto;
+      margin: 20px 0;
+      border: none;
+      border-radius: 4px;
+      aspect-ratio: 16/9;
+    }
+
+    .entry-content img {
+      max-width: 100%;
+      height: auto;
+      margin: 20px 0;
+      border-radius: 4px;
+      display: block;
+    }
+
+    .entry-content ul,
+    .entry-content ol {
+      margin: 15px 0;
+      padding-left: 30px;
+    }
+
+    .entry-content li {
+      margin: 8px 0;
+    }
+
+    .entry-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      overflow-x: auto;
+    }
+
+    .entry-content table th,
+    .entry-content table td {
+      padding: 12px;
+      border: 1px solid #ddd;
+      text-align: left;
+    }
+
+    .entry-content table th {
+      background-color: #f5f5f5;
+      font-weight: 600;
+    }
+
+    .entry-content strong {
+      font-weight: 600;
+      color: #333;
+    }
+
+    /* =============== FOOTER STYLES =============== */
+    #colophon {
+      background-color: #333;
+      color: #fff;
+      padding: 30px 0;
+      margin-top: 40px;
+      width: 100%;
+    }
+
+    .site-info {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 15px;
+      text-align: center;
+      font-size: 13px;
+    }
+
+    .copyright {
+      line-height: 1.8;
+    }
+
+    .copyright a {
+      color: #b54434;
+    }
+
+    blockquote {
+      border-color: #EAEAEA #EAEAEA #EAEAEA #b54434;
+      border-left: 4px solid #b54434;
+      padding: 15px 20px;
+      margin: 20px 0;
+      color: #666;
+      background-color: #f9f9f9;
+      border-radius: 4px;
+    }
+
+    /* =============== RESPONSIVE DESIGN =============== */
+
+    /* Tablets (768px and up) */
+    @media (min-width: 768px) {
+      body {
+        font-size: 16px;
+      }
+
+      .header-wrap {
+        flex-wrap: nowrap;
+      }
+
+      #site-navigation {
+        flex: 1 1 auto;
+        order: 2;
+        width: auto;
+        border-top: none;
+      }
+
+      .main-navigation ul {
+        border-top: none;
+        background-color: transparent;
+      }
+
+      .main-navigation>ul>li {
+        border-right: none;
+      }
+
+      .site-main {
+        padding: 40px;
+      }
+
+      .entry-content h2 {
+        font-size: 26px;
+      }
+
+      .entry-content h3 {
+        font-size: 20px;
+      }
+    }
+
+    /* Large screens (1024px and up) */
+    @media (min-width: 1024px) {
+      .header-wrap {
+        padding: 0 30px;
+      }
+
+      .inner-wrap {
+        padding: 0 30px;
+      }
+
+      .site-branding img {
+        max-height: 60px;
+      }
+
+      .site-branding h1 {
+        font-size: 18px;
+      }
+
+      #content {
+        padding: 40px 0;
+      }
+
+      .site-main {
+        padding: 50px;
+      }
+    }
+
+    /* Small phones (less than 480px) */
+    @media (max-width: 479px) {
+      body {
+        font-size: 14px;
+      }
+
+      .header-wrap {
+        padding: 0 10px;
+      }
+
+      .site-branding h1 {
+        font-size: 14px;
+      }
+
+      .site-branding img {
+        max-height: 40px;
+      }
+
+      .main-navigation a {
+        padding: 10px 8px;
+        font-size: 13px;
+      }
+
+      .main-navigation .sub-menu a {
+        padding: 10px 15px;
+      }
+
+      .main-navigation .sub-menu {
+        min-width: 160px;
+      }
+
+      .site-main {
+        padding: 15px;
+      }
+
+      .entry-content h2 {
+        font-size: 18px;
+        margin: 20px 0 12px 0;
+      }
+
+      .entry-content h3 {
+        font-size: 16px;
+      }
+
+      .entry-content iframe {
+        margin: 15px 0;
+      }
+
+      #colophon {
+        padding: 20px 0;
+      }
+
+      .site-info {
+        font-size: 12px;
+      }
+    }
+
+    /* Medium phones (480px to 767px) */
+    @media (min-width: 480px) and (max-width: 767px) {
+      .header-wrap {
+        padding: 0 12px;
+      }
+
+      .inner-wrap {
+        padding: 0 12px;
+      }
+
+      .main-navigation a {
+        padding: 11px 12px;
+        font-size: 13px;
+      }
+
+      .site-main {
+        padding: 20px;
+      }
+
+      .entry-content h2 {
+        font-size: 20px;
+      }
+    }
+
+    /* Landscape orientation (any width, height < width) */
+    @media (orientation: landscape) and (max-height: 500px) {
+      #masthead {
+        padding: 10px 0;
+      }
+
+      .site-branding h1 {
+        font-size: 14px;
+      }
+
+      .main-navigation a {
+        padding: 8px 12px;
+      }
+    }
+
+    /* Print styles */
+    @media print {
+
+      #masthead,
+      #colophon {
+        display: none;
+      }
+
+      #content {
+        background-color: #fff;
+        padding: 0;
+      }
+
+      .site-main {
+        box-shadow: none;
+        padding: 0;
+      }
+
+      a {
+        color: #000;
+      }
+    }
+  </style>
+</head>
+
+<body class="page-template-default page wp-embed-responsive wp-theme-radiate">
+
+  <div id="parallax-bg"></div>
+  <div id="page" class="hfeed site">
+    <!-- <a class="skip-link screen-reader-text" href="#content">Skip to content</a> -->
+
+    <!-- HEADER -->
+    <header id="masthead" class="site-header" role="banner">
+      <div class="header-wrap clearfix">
+        <div class="site-branding">
+          <a href="/static-page/" rel="home">
+            <img src="/static-page/assets/images/臺灣福音工作全時間訓練-logo.png" alt="臺灣福音工作全時間訓練 logo">
+          </a>
+          <h1 class="site-title"><a href="/static-page/" title="臺灣福音工作全時間訓練網站" rel="home">臺灣福音工作全時間訓練網站</a></h1>
+        </div>
+
+        <!-- NAVIGATION MENU -->
+        <nav id="site-navigation" class="main-navigation" role="navigation">
+          <h4 class="menu-toggle"></h4>
+          <ul class="clearfix">
+            <!-- <li class="menu-item"><a href="/static-page/">首頁</a></li> -->
+
+            <li class="menu-item menu-item-has-children">
+              <a href="/static-page/關於訓練/">關於訓練</a>
+              <ul class="sub-menu">
+                <li class="menu-item"><a href="/static-page/訓練沿革/">訓練沿革</a></li>
+                <li class="menu-item"><a href="/static-page/訓練目的與目標/">訓練目的與目標</a></li>
+                <li class="menu-item"><a href="/static-page/課程介紹/">課程介紹</a></li>
+                <li class="menu-item menu-item-has-children">
+                  <a href="/static-page/訓練生活/">訓練生活</a>
+                  <ul class="sub-menu">
+                    <li class="menu-item"><a href="/static-page/訓練生活/#簿本操練">簿本操練</a></li>
+                    <li class="menu-item"><a href="/static-page/訓練生活/#訓練生活分享">訓練生活分享</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+
+            <li class="menu-item menu-item-has-children">
+              <a href="/static-page/訓練八方面/">訓練八方面</a>
+              <ul class="sub-menu">
+                <li class="menu-item"><a href="/static-page/職事/">職事</a></li>
+                <li class="menu-item"><a href="/static-page/真理/">真理</a></li>
+                <li class="menu-item"><a href="/static-page/生命/">生命</a></li>
+                <li class="menu-item"><a href="/static-page/事奉/">事奉</a></li>
+                <li class="menu-item"><a href="/static-page/基督的身體/">基督的身體</a></li>
+                <li class="menu-item"><a href="/static-page/性格/">性格</a></li>
+                <li class="menu-item"><a href="/static-page/心志/">心志</a></li>
+                <li class="menu-item"><a href="/static-page/語言/">語言</a></li>
+              </ul>
+            </li>
+
+            <li class="menu-item"><a href="/static-page/參加訓練/">參加訓練</a></li>
+            <li class="menu-item"><a href="/static-page/參加青職短期訓練/">青職短期訓練</a></li>
+            <li class="menu-item"><a href="/static-page/訓練負擔/">參加短期訓練</a></li>
+            <li class="menu-item"><a href="/static-page/影音專區/">影音專區</a></li>
+            <li class="menu-item"><a href="/static-page/相關資訊/">相關資訊</a></li>
+          </ul>
+        </nav>
+        <!-- #site-navigation -->
+      </div>
+      <!-- .inner-wrap header-wrap -->
+    </header>
+    <!-- #masthead -->
+
+    <!-- MAIN CONTENT -->
+    <div id="content" class="site-content">
+      <div class="inner-wrap clearfix">
+        <main id="main" class="site-main">
+          <article class="post page">
+            <div class="entry-content">
+              <h1 id="真理">真理</h1>
+
+<div class="one-half first">
+
+<h5 align="center">成為優秀的挖掘者</h5>
+
+主的話就是真理。（約十七17。）主的話一解開就發出亮光，而真理就是光的照耀。感謝主，今天藉着這分職事，聖經中豐富的真理已向我們完全開啟，其中匯集了歷代聖徒對主話的領會與亮光。因此，我們所需要的，乃是花工夫、出代價來進入這一切的豐富。為了幫助學員們深入聖經中的真理，訓練中心在真理方面規劃了基礎課程、核心課程、九四至九七年高峰真理研讀與書介撰寫、以及第二年的高峰真理論文製作等，使學員們能在現有的真理基礎上，繼續深入探究，而在真理的認識和應用上不斷往前。
+
+<h5 align="center">訓練課程—立下扎實的真理根基</h5>
+
+訓練中心在真理方面安排的課程，主要先從立根基、架輪廓開始，再深入挖掘，攀上高峰。第一年的『聖經綱領』，帶學員進入聖經輪廓的認識；第二年『聖經研讀』則讓學員實際操練架構每卷聖經的骨幹。再者，『核心課程』將聖經中與神新約經綸直接相關的真理，包括三一神、神的經綸、基督豐滿的職事、那靈、基督的身體及新耶路撒冷，逐一向學員開啟，使學員對聖經的認識不僅止於一般的事實，而能抓住其核心與中心思想。
+
+歷代以來，對聖經中啟示的認識是逐步往前的。在九四年，主僕李常受弟兄，看見最高的啟示─『神成為人，人成為神』，並在九七年離世之前，不斷釋放關於這個啟示的高峰真理。所以，訓練也加強學員深入研究九四至九七年的信息，以拔高的眼光透視全本聖經。
+
+現今主正藉着一年七次的特會訓練，向祂的兒女供應當前的說話。因此，訓練中心也帶領學員進入主這些卽時的說話，投入身體的水流，隨着神經綸的大輪往前；並藉着禱、研、背、講、考，讓這些話構成在學員裏面，學習新時代的新語言。
+
+<h5 align="center">操練與實行—在根基上建造</h5>
+
+訓練中心不只有系列性的真理課程，在每天下午的復習課中，輔訓以禱、研、背、講的方式，陪同一年級的學員深入當日的信息綱目，使學員對這些話，不只是得着一些靈感，更藉着享受、探究而在真理上有扎實的構成。第二年的學員，則操練輪流帶領復習課，學習挖掘真理，進而帶人追求真理。　訓練每天也有安排閱讀的時間。學員們抓住時間閱讀教師所指定的書籍，一有問題，就和身邊的同伴彼此切磋，或者隨時向教師討教解惑，獲益匪淺。
+
+在『高峰真理書介』的撰寫中，學員們學習將所研讀的高峰真理信息，以精練的文字，寫成三百字的書報簡介。學員們深入主話中的深意，揣摩前面弟兄所得之亮光，藉着反覆的思想，使這些話漸漸成為裏面的構成。
+
+在第二年的訓練裏，學員們也藉高峰真理論文的製作，探究主恢復中九四到九七年的高峰真理，並深入聖經啟示的結晶、及其內在意義。過程中，學員大量閱讀主恢復中豐富的書報，也因這樣對真理的認識、追求，拔高了生命的經歷，同時也印證李弟兄所言都是可實行的，這些話不只是高的啟示和異象，更是我們可活出的實際。
+
+</div>
+
+<div class="one-half" style="text-align: center;"><img fetchpriority="high" decoding="async" alt="" src="/wp-content/uploads/2018/03/真理2.jpg" width="450" height="300" /></div>
+
+<p> </p>
+
+<h2 align="center">真理相關信息</h2>
+
+<p style="text-align: center;"><a title="真理相關文章1-聖經中關於真理的啟示" href="/?page\_id=303" target="\_blank" rel="noopener noreferrer">聖經中關於真理的啟示</a>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<a title="真理相關文章3-被神聖真理的構成" href="/?page\_id=305" target="\_blank" rel="noopener noreferrer">被神聖真理的構成</a>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<a title="真理相關文章2-啟示和異象的高峰—『神成為人，人成為神』" href="/?page\_id=304" target="\_blank" rel="noopener noreferrer">啟示和異象的高峰—『神成為人，人成為神』</a>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;<a title="真理相關文章4-訓練的需要" href="/?page\_id=306" target="\_blank" rel="noopener noreferrer">訓練的需要</a></p>
+
+<p>&lt;/p&gt;
+&lt;/div&gt;<!-- .entry-content -->
+&lt;/article&gt;<!-- #post-## --></p>
+
+<p>&lt;/main&gt;<!-- #main -->
+&lt;/div&gt;<!-- #primary --></p>
+
+<p>&lt;/div&gt;<!-- .inner-wrap -->
+&lt;/div&gt;<!-- #content --></p>
+
+<script type="text/javascript" src="https://www.fttt.org.tw/wp-content/plugins/cssigniter-shortcodes/src/vendor/tiny-slider/tiny-slider.min.js?ver=2.9.3" id="tiny-slider-js"></script>
+
+<script type="text/javascript" src="https://www.fttt.org.tw/wp-content/plugins/cssigniter-shortcodes/src/js/scripts.min.js?ver=2.4.1" id="cisc-shortcodes-js"></script>
+
+<script type="text/javascript" id="audioigniter-js-extra">
+/* <![CDATA[ */
+var aiStrings = {"play\_title":"Play %s","pause\_title":"Pause %s","previous":"Previous track","next":"Next track","toggle\_list\_repeat":"Toggle track listing repeat","toggle\_track\_repeat":"Toggle track repeat","toggle\_list\_visible":"Toggle track listing visibility","buy\_track":"Buy this track","download\_track":"Download this track","volume\_up":"Volume Up","volume\_down":"Volume Down","open\_track\_lyrics":"Open track lyrics","set\_playback\_rate":"Set playback rate","skip\_forward":"Skip forward","skip\_backward":"Skip backward","shuffle":"Shuffle"};
+var aiStats = {"enabled":"","apiUrl":"https:\/\/www.fttt.org.tw\/index.php?rest\_route=\/audioigniter\/v1"};
+/*  */
+
+
+
+
+## 圖片
+
+![臺灣福音工作全時間訓練-logo.png](/assets/images/臺灣福音工作全時間訓練-logo.png)
+</script>
+
+            </div>
+          </article>
+        </main>
+      </div>
+    </div>
+    <!-- #content -->
+
+    <!-- FOOTER -->
+    <footer id="colophon" class="site-footer" role="contentinfo">
+      <div class="site-info">
+        <div class="copyright">
+          Copyright &copy; 2025
+          <a href="/static-page/" title="臺灣福音工作全時間訓練網站">
+            <span>臺灣福音工作全時間訓練網站</span>
+          </a>
+          <br>
+          All rights reserved. | Static Jekyll site converted from original WordPress site
+        </div>
+      </div>
+    </footer>
+    <!-- #colophon -->
+
+    <a href="#masthead" id="scroll-up"><span class="genericon genericon-collapse"></span></a>
+  </div>
+  <!-- #page -->
+
+  <script src="/static-page/assets/wp-includes-js/jquery/jquery.minf43b.js"></script>
+  <script src="/static-page/assets/theme/js/navigation11a8.js"></script>
+  <script src="/static-page/assets/theme/js/custom32d4.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>語言 – 臺灣福音工作全時間訓練網站 - 臺灣福音工作全時間訓練網站</title>
+  <!-- CSS - Using baseurl-prefixed paths for GitHub Pages -->
+  <link rel="stylesheet" href="/static-page/assets/theme/style32d4.css">
+  <link rel="stylesheet" href="/static-page/assets/theme/genericons/genericons3d36.css">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Roboto', 'Merriweather', Arial, sans-serif;
+      color: #333;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    a {
+      color: #b54434;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: #8b3426;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .site-title,
+    .site-description {
+      position: absolute;
+      clip: rect(1px, 1px, 1px, 1px);
+    }
+
+    /* =============== HEADER STYLES =============== */
+    #masthead {
+      background-color: #fff;
+      padding: 15px 0;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      position: relative;
+      z-index: 100;
+      width: 100%;
+    }
+
+    .header-wrap {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 15px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .site-branding {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex: 0 1 auto;
+      min-width: 0;
+    }
+
+    .site-branding img {
+      max-height: 50px;
+      width: auto;
+      flex-shrink: 0;
+    }
+
+    .site-branding h1 {
+      margin: 0;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 1.2;
+      word-break: break-word;
+    }
+
+    .site-branding a {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+
+    /* =============== NAVIGATION STYLES =============== */
+    #site-navigation {
+      flex: 1 1 100%;
+      width: 100%;
+      order: 3;
+    }
+
+    .main-navigation ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0;
+      background-color: #fafafa;
+      border-top: 1px solid #eee;
+    }
+
+    .main-navigation>ul>li {
+      position: relative;
+      flex: 0 0 auto;
+      border-right: 1px solid #eee;
+    }
+
+    .main-navigation>ul>li:last-child {
+      border-right: none;
+    }
+
+    .main-navigation a {
+      display: block;
+      padding: 12px 14px;
+      text-decoration: none;
+      color: #333;
+      font-size: 14px;
+      transition: all 0.3s ease;
+      white-space: nowrap;
+    }
+
+    .main-navigation a:hover {
+      background-color: #b54434;
+      color: #fff;
+    }
+
+    .main-navigation .sub-menu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #fff;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      min-width: 200px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+      z-index: 1000;
+      border: 1px solid #eee;
+    }
+
+    .main-navigation li:hover>.sub-menu {
+      display: block;
+    }
+
+    .main-navigation .sub-menu li {
+      border-bottom: 1px solid #eee;
+    }
+
+    .main-navigation .sub-menu li:last-child {
+      border-bottom: none;
+    }
+
+    .main-navigation .sub-menu a {
+      padding: 12px 20px;
+      color: #333;
+      white-space: normal;
+    }
+
+    /* =============== CONTENT STYLES =============== */
+    #content {
+      background-color: #EAEAEA;
+      padding: 30px 0;
+      width: 100%;
+    }
+
+    .inner-wrap {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 15px;
+    }
+
+    .site-main {
+      background-color: #fff;
+      padding: 25px;
+      border-radius: 4px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+
+    .entry-content {
+      line-height: 1.8;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+    }
+
+    .entry-content h2 {
+      color: #b54434;
+      margin: 30px 0 15px 0;
+      font-size: 22px;
+      border-bottom: 2px solid #b54434;
+      padding-bottom: 10px;
+      line-height: 1.3;
+    }
+
+    .entry-content h3 {
+      color: #666;
+      margin: 20px 0 10px 0;
+      font-size: 18px;
+      line-height: 1.3;
+    }
+
+    .entry-content h4 {
+      color: #888;
+      margin: 15px 0 8px 0;
+      font-size: 16px;
+    }
+
+    .entry-content p {
+      margin: 0 0 15px 0;
+    }
+
+    .entry-content iframe {
+      max-width: 100%;
+      width: 100%;
+      height: auto;
+      margin: 20px 0;
+      border: none;
+      border-radius: 4px;
+      aspect-ratio: 16/9;
+    }
+
+    .entry-content img {
+      max-width: 100%;
+      height: auto;
+      margin: 20px 0;
+      border-radius: 4px;
+      display: block;
+    }
+
+    .entry-content ul,
+    .entry-content ol {
+      margin: 15px 0;
+      padding-left: 30px;
+    }
+
+    .entry-content li {
+      margin: 8px 0;
+    }
+
+    .entry-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      overflow-x: auto;
+    }
+
+    .entry-content table th,
+    .entry-content table td {
+      padding: 12px;
+      border: 1px solid #ddd;
+      text-align: left;
+    }
+
+    .entry-content table th {
+      background-color: #f5f5f5;
+      font-weight: 600;
+    }
+
+    .entry-content strong {
+      font-weight: 600;
+      color: #333;
+    }
+
+    /* =============== FOOTER STYLES =============== */
+    #colophon {
+      background-color: #333;
+      color: #fff;
+      padding: 30px 0;
+      margin-top: 40px;
+      width: 100%;
+    }
+
+    .site-info {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 15px;
+      text-align: center;
+      font-size: 13px;
+    }
+
+    .copyright {
+      line-height: 1.8;
+    }
+
+    .copyright a {
+      color: #b54434;
+    }
+
+    blockquote {
+      border-color: #EAEAEA #EAEAEA #EAEAEA #b54434;
+      border-left: 4px solid #b54434;
+      padding: 15px 20px;
+      margin: 20px 0;
+      color: #666;
+      background-color: #f9f9f9;
+      border-radius: 4px;
+    }
+
+    /* =============== RESPONSIVE DESIGN =============== */
+
+    /* Tablets (768px and up) */
+    @media (min-width: 768px) {
+      body {
+        font-size: 16px;
+      }
+
+      .header-wrap {
+        flex-wrap: nowrap;
+      }
+
+      #site-navigation {
+        flex: 1 1 auto;
+        order: 2;
+        width: auto;
+        border-top: none;
+      }
+
+      .main-navigation ul {
+        border-top: none;
+        background-color: transparent;
+      }
+
+      .main-navigation>ul>li {
+        border-right: none;
+      }
+
+      .site-main {
+        padding: 40px;
+      }
+
+      .entry-content h2 {
+        font-size: 26px;
+      }
+
+      .entry-content h3 {
+        font-size: 20px;
+      }
+    }
+
+    /* Large screens (1024px and up) */
+    @media (min-width: 1024px) {
+      .header-wrap {
+        padding: 0 30px;
+      }
+
+      .inner-wrap {
+        padding: 0 30px;
+      }
+
+      .site-branding img {
+        max-height: 60px;
+      }
+
+      .site-branding h1 {
+        font-size: 18px;
+      }
+
+      #content {
+        padding: 40px 0;
+      }
+
+      .site-main {
+        padding: 50px;
+      }
+    }
+
+    /* Small phones (less than 480px) */
+    @media (max-width: 479px) {
+      body {
+        font-size: 14px;
+      }
+
+      .header-wrap {
+        padding: 0 10px;
+      }
+
+      .site-branding h1 {
+        font-size: 14px;
+      }
+
+      .site-branding img {
+        max-height: 40px;
+      }
+
+      .main-navigation a {
+        padding: 10px 8px;
+        font-size: 13px;
+      }
+
+      .main-navigation .sub-menu a {
+        padding: 10px 15px;
+      }
+
+      .main-navigation .sub-menu {
+        min-width: 160px;
+      }
+
+      .site-main {
+        padding: 15px;
+      }
+
+      .entry-content h2 {
+        font-size: 18px;
+        margin: 20px 0 12px 0;
+      }
+
+      .entry-content h3 {
+        font-size: 16px;
+      }
+
+      .entry-content iframe {
+        margin: 15px 0;
+      }
+
+      #colophon {
+        padding: 20px 0;
+      }
+
+      .site-info {
+        font-size: 12px;
+      }
+    }
+
+    /* Medium phones (480px to 767px) */
+    @media (min-width: 480px) and (max-width: 767px) {
+      .header-wrap {
+        padding: 0 12px;
+      }
+
+      .inner-wrap {
+        padding: 0 12px;
+      }
+
+      .main-navigation a {
+        padding: 11px 12px;
+        font-size: 13px;
+      }
+
+      .site-main {
+        padding: 20px;
+      }
+
+      .entry-content h2 {
+        font-size: 20px;
+      }
+    }
+
+    /* Landscape orientation (any width, height < width) */
+    @media (orientation: landscape) and (max-height: 500px) {
+      #masthead {
+        padding: 10px 0;
+      }
+
+      .site-branding h1 {
+        font-size: 14px;
+      }
+
+      .main-navigation a {
+        padding: 8px 12px;
+      }
+    }
+
+    /* Print styles */
+    @media print {
+
+      #masthead,
+      #colophon {
+        display: none;
+      }
+
+      #content {
+        background-color: #fff;
+        padding: 0;
+      }
+
+      .site-main {
+        box-shadow: none;
+        padding: 0;
+      }
+
+      a {
+        color: #000;
+      }
+    }
+  </style>
+</head>
+
+<body class="page-template-default page wp-embed-responsive wp-theme-radiate">
+
+  <div id="parallax-bg"></div>
+  <div id="page" class="hfeed site">
+    <!-- <a class="skip-link screen-reader-text" href="#content">Skip to content</a> -->
+
+    <!-- HEADER -->
+    <header id="masthead" class="site-header" role="banner">
+      <div class="header-wrap clearfix">
+        <div class="site-branding">
+          <a href="/static-page/" rel="home">
+            <img src="/static-page/assets/images/臺灣福音工作全時間訓練-logo.png" alt="臺灣福音工作全時間訓練 logo">
+          </a>
+          <h1 class="site-title"><a href="/static-page/" title="臺灣福音工作全時間訓練網站" rel="home">臺灣福音工作全時間訓練網站</a></h1>
+        </div>
+
+        <!-- NAVIGATION MENU -->
+        <nav id="site-navigation" class="main-navigation" role="navigation">
+          <h4 class="menu-toggle"></h4>
+          <ul class="clearfix">
+            <!-- <li class="menu-item"><a href="/static-page/">首頁</a></li> -->
+
+            <li class="menu-item menu-item-has-children">
+              <a href="/static-page/關於訓練/">關於訓練</a>
+              <ul class="sub-menu">
+                <li class="menu-item"><a href="/static-page/訓練沿革/">訓練沿革</a></li>
+                <li class="menu-item"><a href="/static-page/訓練目的與目標/">訓練目的與目標</a></li>
+                <li class="menu-item"><a href="/static-page/課程介紹/">課程介紹</a></li>
+                <li class="menu-item menu-item-has-children">
+                  <a href="/static-page/訓練生活/">訓練生活</a>
+                  <ul class="sub-menu">
+                    <li class="menu-item"><a href="/static-page/訓練生活/#簿本操練">簿本操練</a></li>
+                    <li class="menu-item"><a href="/static-page/訓練生活/#訓練生活分享">訓練生活分享</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+
+            <li class="menu-item menu-item-has-children">
+              <a href="/static-page/訓練八方面/">訓練八方面</a>
+              <ul class="sub-menu">
+                <li class="menu-item"><a href="/static-page/職事/">職事</a></li>
+                <li class="menu-item"><a href="/static-page/真理/">真理</a></li>
+                <li class="menu-item"><a href="/static-page/生命/">生命</a></li>
+                <li class="menu-item"><a href="/static-page/事奉/">事奉</a></li>
+                <li class="menu-item"><a href="/static-page/基督的身體/">基督的身體</a></li>
+                <li class="menu-item"><a href="/static-page/性格/">性格</a></li>
+                <li class="menu-item"><a href="/static-page/心志/">心志</a></li>
+                <li class="menu-item"><a href="/static-page/語言/">語言</a></li>
+              </ul>
+            </li>
+
+            <li class="menu-item"><a href="/static-page/參加訓練/">參加訓練</a></li>
+            <li class="menu-item"><a href="/static-page/參加青職短期訓練/">青職短期訓練</a></li>
+            <li class="menu-item"><a href="/static-page/訓練負擔/">參加短期訓練</a></li>
+            <li class="menu-item"><a href="/static-page/影音專區/">影音專區</a></li>
+            <li class="menu-item"><a href="/static-page/相關資訊/">相關資訊</a></li>
+          </ul>
+        </nav>
+        <!-- #site-navigation -->
+      </div>
+      <!-- .inner-wrap header-wrap -->
+    </header>
+    <!-- #masthead -->
+
+    <!-- MAIN CONTENT -->
+    <div id="content" class="site-content">
+      <div class="inner-wrap clearfix">
+        <main id="main" class="site-main">
+          <article class="post page">
+            <div class="entry-content">
+              <h1 id="語言">語言</h1>
+
+<div class="one-half first">
+
+<h4 align="center">訓練課程—在異象中，學習語言大不同</h4>
+
+訓練中的語言課程，包含了英文和聖經希臘文，其目的在培養學員們使用美式英語溝通，以及研讀聖經時查閱希臘原文的能力。
+
+在英文課程的設計上，第一年根據學員們英語程度的不同，給予所需要的幫助，使學員們平衡的在聽、說、讀、寫等操練上受成全。第二年則在合班上課中，要求學員們在聆聽英文信息之後，撰寫申言稿，並操練用靈講說，大幅加強學員們『說』的能力。而在一學期一次的英文加強週裏，學員們不論上課或在生活中所有的交談都使用英文；這提供了較長且連續的時間，讓學員們浸透在講說英語的環境中。
+
+訓練中，幾位外籍和本國籍的英語教師，帶着從職事所領受的負擔，細心又耐心的教學。學員們藉由教師們的指導，逐日進步，以期在這身體相調的時代，突破語言的限制，有分於宇宙新人裏的配搭與交通。
+
+另外，在希臘文課裏學習發音和基礎的文法，使學員們培養使用工具書查讀希臘原文的能力。更藉着聖經中重要字詞的字義研究實作，使學員們應用所學，並加深對這分時代職事所供應之真理的珍賞。
+
+</div>
+
+<div class="one-half" style="text-align: center;"><img decoding="async" alt="" src="/wp-content/uploads/2018/02/語言.JPG" /></div>
+
+<p> &lt;/p&gt;
+&lt;/div&gt;<!-- .entry-content -->
+&lt;/article&gt;<!-- #post-## --></p>
+
+<p>&lt;/main&gt;<!-- #main -->
+&lt;/div&gt;<!-- #primary --></p>
+
+<p>&lt;/div&gt;<!-- .inner-wrap -->
+&lt;/div&gt;<!-- #content --></p>
+
+<script type="text/javascript" src="https://www.fttt.org.tw/wp-content/plugins/cssigniter-shortcodes/src/vendor/tiny-slider/tiny-slider.min.js?ver=2.9.3" id="tiny-slider-js"></script>
+
+<script type="text/javascript" src="https://www.fttt.org.tw/wp-content/plugins/cssigniter-shortcodes/src/js/scripts.min.js?ver=2.4.1" id="cisc-shortcodes-js"></script>
+
+<script type="text/javascript" id="audioigniter-js-extra">
+/* <![CDATA[ */
+var aiStrings = {"play\_title":"Play %s","pause\_title":"Pause %s","previous":"Previous track","next":"Next track","toggle\_list\_repeat":"Toggle track listing repeat","toggle\_track\_repeat":"Toggle track repeat","toggle\_list\_visible":"Toggle track listing visibility","buy\_track":"Buy this track","download\_track":"Download this track","volume\_up":"Volume Up","volume\_down":"Volume Down","open\_track\_lyrics":"Open track lyrics","set\_playback\_rate":"Set playback rate","skip\_forward":"Skip forward","skip\_backward":"Skip backward","shuffle":"Shuffle"};
+var aiStats = {"enabled":"","apiUrl":"https:\/\/www.fttt.org.tw\/index.php?rest\_route=\/audioigniter\/v1"};
+/*  */
+</script>
+
+            </div>
+          </article>
+        </main>
+      </div>
+    </div>
+    <!-- #content -->
+
+    <!-- FOOTER -->
+    <footer id="colophon" class="site-footer" role="contentinfo">
+      <div class="site-info">
+        <div class="copyright">
+          Copyright &copy; 2025
+          <a href="/static-page/" title="臺灣福音工作全時間訓練網站">
+            <span>臺灣福音工作全時間訓練網站</span>
+          </a>
+          <br>
+          All rights reserved. | Static Jekyll site converted from original WordPress site
+        </div>
+      </div>
+    </footer>
+    <!-- #colophon -->
+
+    <a href="#masthead" id="scroll-up"><span class="genericon genericon-collapse"></span></a>
+  </div>
+  <!-- #page -->
+
+  <script src="/static-page/assets/wp-includes-js/jquery/jquery.minf43b.js"></script>
+  <script src="/static-page/assets/theme/js/navigation11a8.js"></script>
+  <script src="/static-page/assets/theme/js/custom32d4.js"></script>
+
+</body>
+
+</html>
