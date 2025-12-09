@@ -21,7 +21,7 @@ if [ -f "_site/index.html" ]; then
     find _site -name "*.html" -exec sed -i '' 's|src="/assets/|src="/static-page/assets/|g' {} \;
     find _site -name "*.html" -exec sed -i '' 's|src="/wp-content/|src="/static-page/wp-content/|g' {} \;
     find _site -name "*.html" -exec sed -i '' 's|src="/static-page//|src="/static-page/|g' {} \;
-    
+
     echo ""
     echo "✅ Build successful!"
     echo ""
