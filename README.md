@@ -15,6 +15,7 @@
 ### 系統需求
 
 - Ruby 3.1+ (建議使用 rbenv 管理)
+- ghp-import (建議使用 pipx 安裝)
 - Git
 
 ### 環境配置
@@ -73,6 +74,47 @@ bundle install
 
 # 3. 準備完成！
 ```
+
+### 安裝 ghp-import（部署工具）
+
+`ghp-import` 是用於自動化部署到 GitHub Pages 的工具。使用 `pipx` 安裝能隔離其依賴環境。
+
+#### 前置要求
+
+- Python 3.6+（macOS 和 Ubuntu 通常預裝）
+- `pipx`（Python 應用程式管理工具）
+
+#### 安裝步驟
+
+##### 步驟 1：安裝 pipx
+
+**macOS：**
+```bash
+brew install pipx
+pipx ensurepath
+```
+
+**WSL/Ubuntu：**
+```bash
+python3 -m pip install --user pipx
+export PATH="$HOME/.local/bin:$PATH"
+echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc
+source ~/.bashrc
+```
+
+##### 步驟 2：使用 pipx 安裝 ghp-import
+
+```bash
+pipx install ghp-import
+```
+
+##### 步驟 3：驗證安裝
+
+```bash
+ghp-import --version
+```
+
+應該看到類似輸出：`ghp-import 2.x.x`
 
 ---
 
@@ -296,6 +338,8 @@ bundle exec jekyll serve --config _config.yml,_config.local.yml
 
 - 確保 repository 名稱為 `static-page`
 - 確保 GitHub Pages 設定為 `gh-pages` 分支
+- 已安裝 `ghp-import`（見[安裝 ghp-import](#安裝-ghp-import部署工具)）
+- GitHub 帳戶有 repository 的寫入權限
 
 #### 部署步驟
 
@@ -306,9 +350,9 @@ cd jekyll-site
 bash deploy-pages.sh
 
 # 方法 2：分步操作
-bash build-pages.sh          # 使用 /static-page baseurl 構建
+bash build-pages.sh              # 使用 /static-page baseurl 構建
 # 手動審查 _site/ 目錄
-gh-import -n -p -f _site     # 部署到 gh-pages 分支
+ghp-import -n -p -f _site        # 部署到 gh-pages 分支
 ```
 
 部署後訪問：`https://fttt-web.github.io/static-page/`
