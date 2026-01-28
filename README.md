@@ -178,7 +178,7 @@ Jekyll 會自動合併配置檔，選定的配置會覆蓋基礎設定。
 
 ```bash
 # 例如：
-touch jekyll-site/新頁面名稱.md
+touch 新頁面名稱.md
 ```
 
 **檔案命名規則：**
