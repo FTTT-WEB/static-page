@@ -16,12 +16,6 @@ rm -rf _site
 bundle exec jekyll build --config _config.yml,_config.pages.yml
 
 if [ -f "_site/index.html" ]; then
-    # Fix image paths in content: prefix /assets/ and /wp-content/ with /static-page
-    echo "Fixing image paths..."
-    find _site -name "*.html" -exec sed -i '' 's|src="/assets/|src="/static-page/assets/|g' {} \;
-    find _site -name "*.html" -exec sed -i '' 's|src="/wp-content/|src="/static-page/wp-content/|g' {} \;
-    find _site -name "*.html" -exec sed -i '' 's|src="/static-page//|src="/static-page/|g' {} \;
-
     echo ""
     echo "✅ Build successful!"
     echo ""
@@ -29,7 +23,7 @@ if [ -f "_site/index.html" ]; then
     echo ""
     echo "Next steps:"
     echo "  1. Deploy: ./deploy-pages.sh"
-    echo "  2. Check: https://fttt-web.github.io/static-page/"
+    echo "  2. Check: https://fttt-web.github.io/"
 else
     echo "❌ Build failed"
     exit 1

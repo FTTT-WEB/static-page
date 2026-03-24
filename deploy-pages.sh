@@ -25,20 +25,12 @@ echo "Deploying to GitHub Pages..."
 echo "=================================="
 echo ""
 
-# Fix image paths in content: prefix /assets/ and /wp-content/ with /static-page
-echo "Fixing image paths..."
-find _site -name "*.html" -exec sed -i '' 's|src="/assets/|src="/static-page/assets/|g' {} \;
-find _site -name "*.html" -exec sed -i '' 's|src="/wp-content/|src="/static-page/wp-content/|g' {} \;
-find _site -name "*.html" -exec sed -i '' 's|src="/static-page//|src="/static-page/|g' {} \;
-
-echo ""
-
 # Deploy to gh-pages branch
 ghp-import -n -p -f _site
 
 echo ""
 echo "✅ Deployment successful!"
 echo ""
-echo "📍 Live site: https://fttt-web.github.io/static-page/"
+echo "📍 Live site: https://fttt-web.github.io/"
 echo ""
 echo "Note: Changes may take a few moments to appear on GitHub Pages"
