@@ -7,6 +7,8 @@ set -e
 
 cd "$(dirname "$0")" || exit 1
 
+BASEURL="/static-page"
+
 echo "🔨 Building Jekyll site for GitHub Pages..."
 echo "   Config: _config.yml + _config.pages.yml"
 echo "   Baseurl: /static-page"
@@ -14,6 +16,9 @@ echo ""
 
 rm -rf _site
 bundle exec jekyll build --config _config.yml,_config.pages.yml
+
+echo "Normalizing internal root-relative links for GitHub Pages baseurl..."
+find _site -name "*.html" -exec perl -i -pe 's{href="/(?!/|static-page/)}{href="/static-page/}g; s{src="/(?!/|static-page/)}{src="/static-page/}g' {} +
 
 if [ -f "_site/index.html" ]; then
     # # Fix image paths in content: prefix /assets/ and /wp-content/ with /static-page
@@ -29,7 +34,7 @@ if [ -f "_site/index.html" ]; then
     echo ""
     echo "Next steps:"
     echo "  1. Deploy: ./deploy-pages.sh"
-    echo "  2. Check: https://fttt-web.github.io/static-page/"
+    echo "  2. Check: https://fttt-web.github.io${BASEURL}/"
 else
     echo "❌ Build failed"
     exit 1
