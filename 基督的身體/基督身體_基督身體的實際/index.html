@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>基督身體的實際 – 臺灣福音工作全時間訓練網站 - 臺灣福音工作全時間訓練網站</title>
+  <!-- CSS - Using baseurl-prefixed paths for GitHub Pages -->
+
+  <!-- <link rel="stylesheet" href="/static-page/assets/theme/style32d4.css">
+  <link rel="stylesheet" href="/static-page/assets/theme/genericons/genericons3d36.css"> -->
+  <link rel="stylesheet" href="/static-page/assets/css/main.css">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Roboto', 'Merriweather', Arial, sans-serif;
+      color: #333;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    a {
+      color: #b54434;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: #8b3426;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .site-title,
+    .site-description {
+      position: absolute;
+      clip: rect(1px, 1px, 1px, 1px);
+    }
+
+    /* =============== HEADER STYLES =============== */
+    #masthead {
+      background-color: #fff;
+      padding: 15px 0;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      position: relative;
+      z-index: 100;
+      width: 100%;
+    }
+
+    .header-wrap {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 15px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .site-branding {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex: 0 1 auto;
+      min-width: 0;
+    }
+
+    .site-branding img {
+      max-height: 50px;
+      width: auto;
+      flex-shrink: 0;
+    }
+
+    .site-branding h1 {
+      margin: 0;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 1.2;
+      word-break: break-word;
+    }
+
+    .site-branding a {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+
+    /* =============== NAVIGATION STYLES =============== */
+    #site-navigation {
+      flex: 1 1 100%;
+      width: 100%;
+      order: 3;
+    }
+
+    .main-navigation ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0;
+      background-color: #fafafa;
+      border-top: 1px solid #eee;
+    }
+
+    .main-navigation>ul>li {
+      position: relative;
+      flex: 0 0 auto;
+      border-right: 1px solid #eee;
+    }
+
+    .main-navigation>ul>li:last-child {
+      border-right: none;
+    }
+
+    .main-navigation a {
+      display: block;
+      padding: 12px 14px;
+      text-decoration: none;
+      color: #333;
+      font-size: 14px;
+      transition: all 0.3s ease;
+      white-space: nowrap;
+    }
+
+    .main-navigation a:hover {
+      background-color: #b54434;
+      color: #fff;
+    }
+
+    .main-navigation .sub-menu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #fff;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      min-width: 200px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+      z-index: 1000;
+      border: 1px solid #eee;
+    }
+
+    .main-navigation li:hover>.sub-menu {
+      display: block;
+    }
+
+    .main-navigation .sub-menu li {
+      border-bottom: 1px solid #eee;
+    }
+
+    .main-navigation .sub-menu li:last-child {
+      border-bottom: none;
+    }
+
+    .main-navigation .sub-menu a {
+      padding: 12px 20px;
+      color: #333;
+      white-space: normal;
+    }
+
+    /* =============== CONTENT STYLES =============== */
+    #content {
+      background-color: #EAEAEA;
+      padding: 30px 0;
+      width: 100%;
+    }
+
+    .inner-wrap {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 15px;
+    }
+
+    .site-main {
+      background-color: #fff;
+      padding: 25px;
+      border-radius: 4px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+
+    .entry-content {
+      line-height: 1.8;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+    }
+
+    .entry-content h2 {
+      color: #b54434;
+      margin: 30px 0 15px 0;
+      font-size: 22px;
+      border-bottom: 2px solid #b54434;
+      padding-bottom: 10px;
+      line-height: 1.3;
+    }
+
+    .entry-content h3 {
+      color: #666;
+      margin: 20px 0 10px 0;
+      font-size: 18px;
+      line-height: 1.3;
+    }
+
+    .entry-content h4 {
+      color: #888;
+      margin: 15px 0 8px 0;
+      font-size: 16px;
+    }
+
+    .entry-content p {
+      margin: 0 0 15px 0;
+    }
+
+    .entry-content iframe {
+      max-width: 100%;
+      width: 100%;
+      height: auto;
+      margin: 20px 0;
+      border: none;
+      border-radius: 4px;
+      aspect-ratio: 16/9;
+    }
+
+    .entry-content img {
+      max-width: 100%;
+      height: auto;
+      margin: 20px 0;
+      border-radius: 4px;
+      display: block;
+    }
+
+    .entry-content ul,
+    .entry-content ol {
+      margin: 15px 0;
+      padding-left: 30px;
+    }
+
+    .entry-content li {
+      margin: 8px 0;
+    }
+
+    .entry-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      overflow-x: auto;
+    }
+
+    .entry-content table th,
+    .entry-content table td {
+      padding: 12px;
+      border: 1px solid #ddd;
+      text-align: left;
+    }
+
+    .entry-content table th {
+      background-color: #f5f5f5;
+      font-weight: 600;
+    }
+
+    .entry-content strong {
+      font-weight: 600;
+      color: #333;
+    }
+
+    /* =============== FOOTER STYLES =============== */
+    #colophon {
+      background-color: #333;
+      color: #fff;
+      padding: 30px 0;
+      margin-top: 40px;
+      width: 100%;
+    }
+
+    .site-info {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 15px;
+      text-align: center;
+      font-size: 13px;
+    }
+
+    .copyright {
+      line-height: 1.8;
+    }
+
+    .copyright a {
+      color: #b54434;
+    }
+
+    blockquote {
+      border-color: #EAEAEA #EAEAEA #EAEAEA #b54434;
+      border-left: 4px solid #b54434;
+      padding: 15px 20px;
+      margin: 20px 0;
+      color: #666;
+      background-color: #f9f9f9;
+      border-radius: 4px;
+    }
+    
+    .entry-content .will-red {
+      color: #b54434; 
+    }
+
+    /* =============== RESPONSIVE DESIGN =============== */
+
+    /* Tablets (768px and up) */
+    @media (min-width: 768px) {
+      body {
+        font-size: 16px;
+      }
+
+      .header-wrap {
+        flex-wrap: nowrap;
+      }
+
+      #site-navigation {
+        flex: 1 1 auto;
+        order: 2;
+        width: auto;
+        border-top: none;
+      }
+
+      .main-navigation ul {
+        border-top: none;
+        background-color: transparent;
+      }
+
+      .main-navigation>ul>li {
+        border-right: none;
+      }
+
+      .site-main {
+        padding: 40px;
+      }
+
+      .entry-content h2 {
+        font-size: 26px;
+      }
+
+      .entry-content h3 {
+        font-size: 20px;
+      }
+    }
+
+    /* Large screens (1024px and up) */
+    @media (min-width: 1024px) {
+      .header-wrap {
+        padding: 0 30px;
+      }
+
+      .inner-wrap {
+        padding: 0 30px;
+      }
+
+      .site-branding img {
+        max-height: 60px;
+      }
+
+      .site-branding h1 {
+        font-size: 18px;
+      }
+
+      #content {
+        padding: 40px 0;
+      }
+
+      .site-main {
+        padding: 50px;
+      }
+    }
+
+    /* Small phones (less than 480px) */
+    @media (max-width: 479px) {
+      body {
+        font-size: 14px;
+      }
+
+      .header-wrap {
+        padding: 0 10px;
+      }
+
+      .site-branding h1 {
+        font-size: 14px;
+      }
+
+      .site-branding img {
+        max-height: 40px;
+      }
+
+      .main-navigation a {
+        padding: 10px 8px;
+        font-size: 13px;
+      }
+
+      .main-navigation .sub-menu a {
+        padding: 10px 15px;
+      }
+
+      .main-navigation .sub-menu {
+        min-width: 160px;
+      }
+
+      .site-main {
+        padding: 15px;
+      }
+
+      .entry-content h2 {
+        font-size: 18px;
+        margin: 20px 0 12px 0;
+      }
+
+      .entry-content h3 {
+        font-size: 16px;
+      }
+
+      .entry-content iframe {
+        margin: 15px 0;
+      }
+
+      #colophon {
+        padding: 20px 0;
+      }
+
+      .site-info {
+        font-size: 12px;
+      }
+    }
+
+    /* Medium phones (480px to 767px) */
+    @media (min-width: 480px) and (max-width: 767px) {
+      .header-wrap {
+        padding: 0 12px;
+      }
+
+      .inner-wrap {
+        padding: 0 12px;
+      }
+
+      .main-navigation a {
+        padding: 11px 12px;
+        font-size: 13px;
+      }
+
+      .site-main {
+        padding: 20px;
+      }
+
+      .entry-content h2 {
+        font-size: 20px;
+      }
+    }
+
+    /* Landscape orientation (any width, height < width) */
+    @media (orientation: landscape) and (max-height: 500px) {
+      #masthead {
+        padding: 10px 0;
+      }
+
+      .site-branding h1 {
+        font-size: 14px;
+      }
+
+      .main-navigation a {
+        padding: 8px 12px;
+      }
+    }
+
+    /* Print styles */
+    @media print {
+
+      #masthead,
+      #colophon {
+        display: none;
+      }
+
+      #content {
+        background-color: #fff;
+        padding: 0;
+      }
+
+      .site-main {
+        box-shadow: none;
+        padding: 0;
+      }
+
+      a {
+        color: #000;
+      }
+    }
+    
+    .entry-content h5.will-red {
+      color: #c00;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body class="page-template-default page wp-embed-responsive wp-theme-radiate">
+
+  <div id="parallax-bg"></div>
+  <div id="page" class="hfeed site">
+    <!-- <a class="skip-link screen-reader-text" href="#content">Skip to content</a> -->
+
+    <!-- HEADER -->
+<header id="masthead" class="site-header" role="banner">
+  <div class="header-wrap clearfix">
+    <div class="site-branding">
+      <a href="/static-page/" rel="home">
+        <img src="/static-page/assets/images/臺灣福音工作全時間訓練-logo.png" alt="臺灣福音工作全時間訓練 logo">
+      </a>
+      <h1 class="site-title"><a href="/static-page/" title="臺灣福音工作全時間訓練網站" rel="home">臺灣福音工作全時間訓練網站</a></h1>
+    </div>
+
+    <!-- NAVIGATION MENU -->
+    <nav id="site-navigation" class="main-navigation" role="navigation">
+      <h4 class="menu-toggle"></h4>
+      <ul class="clearfix">
+        <!-- <li class="menu-item"><a href="/static-page/">首頁</a></li> -->
+
+        <li class="menu-item menu-item-has-children">
+          <a href="/static-page/關於訓練/">關於訓練</a>
+          <ul class="sub-menu">
+            <li class="menu-item"><a href="/static-page/訓練沿革/">訓練沿革</a></li>
+            <li class="menu-item"><a href="/static-page/訓練目的與目標/">訓練目的與目標</a></li>
+            <li class="menu-item"><a href="/static-page/課程介紹/">課程介紹</a></li>
+            <li class="menu-item menu-item-has-children">
+              <a href="/static-page/訓練生活/">訓練生活</a>
+              <ul class="sub-menu">
+                <li class="menu-item"><a href="/static-page/訓練生活/簿本操練">簿本操練</a></li>
+                <li class="menu-item"><a href="/static-page/訓練生活/#訓練生活分享">訓練生活分享</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+
+        <li class="menu-item menu-item-has-children">
+          <a href="/static-page/訓練八方面/">訓練八方面</a>
+          <ul class="sub-menu">
+            <li class="menu-item"><a href="/static-page/職事/">職事</a></li>
+            <li class="menu-item"><a href="/static-page/真理/">真理</a></li>
+            <li class="menu-item"><a href="/static-page/生命/">生命</a></li>
+            <li class="menu-item"><a href="/static-page/事奉/">事奉</a></li>
+            <li class="menu-item"><a href="/static-page/基督的身體/">基督的身體</a></li>
+            <li class="menu-item"><a href="/static-page/性格/">性格</a></li>
+            <li class="menu-item"><a href="/static-page/心志/">心志</a></li>
+            <li class="menu-item"><a href="/static-page/語言/">語言</a></li>
+          </ul>
+        </li>
+
+        <li class="menu-item"><a href="/static-page/參加訓練/">參加訓練</a></li>
+        <li class="menu-item"><a href="/static-page/參加青職短期訓練/">青職短期訓練</a></li>
+        <li class="menu-item"><a href="/static-page/參加短期訓練/">參加短期訓練</a></li>
+        <li class="menu-item"><a href="/static-page/影音專區/">影音專區</a></li>
+        <li class="menu-item"><a href="/static-page/相關資訊/">相關資訊</a></li>
+      </ul>
+    </nav>
+    <!-- #site-navigation -->
+  </div>
+  <!-- .inner-wrap header-wrap -->
+</header>
+<!-- #masthead -->
+
+    <!-- MAIN CONTENT -->
+    <div id="content" class="site-content">
+      <div class="inner-wrap clearfix">
+        <main id="main" class="site-main">
+          <article class="post page">
+            <div class="entry-content">
+              <h1 id="基督的身體相關文章2-基督身體的實際">基督的身體相關文章2-基督身體的實際</h1>
+<h2 id="基督身體的實際神人共同生活">基督身體的實際－神人共同生活</h2>
+<p>簡單的說，基督身體的實際，就是神所救贖的一班人，和神人基督一同過神人的生活。在基督成為肉體，死而復活之前，宇宙間有神在天上，也有人在地上。但是在宇宙中沒有一個人是神又是人。而且這個神而人者不是貶眼之間，就變成了一個人。祂乃是照着人天然的律，在母腹成孕九個月，然後生成一個人。祂從作小孩子起，在地上活了三十三年半。我從前對這事一直有個問題，為甚麼主要那麼久活在地上。祂在地上三十三年半，好像只有末了的三年半出來傳道，出來帶領門徒們，是真正作神的工作。主在地上的前三十年，福音書題的並不多。不過我們能讀出來，祂是在一個窮木匠家裏生活，人們稱祂為木匠。（太十三５５，可六３。）但我不明白主在地上過那三十年的木匠生活，到底是甚麼意思？現在因為光的照耀，我就看見，祂乃是用三十三年半的工夫，在地上活出一個神人生活的模型。 主耶穌復活升天了，如今祂在天上就是作賜生命的靈。這賜生命的靈就是那位成肉身、經人生、死而復活的神而人者。這賜生命的靈把我們重生之後，就住在我們裏面，調在我們的靈裏，帶着我們過神人的生活。祂就是那位神而人者，經過死而復活，成為賜生命之靈，也就是那是靈的基督。祂在祂的升天裏作了新約的中保，（來八６，）作了新約的擔保者，（來七２２，）作了大祭司，（來八１，）作了天上的執事；（來八２；）如今在天上作一件事，就是把祂所救贖而重生的人，都作成神。怎麼作法呢？就是在他們裏面，一直的把他們分別成聖，把他們更新，把他們變化。這個變化就是神化。變化的目的，就是叫人成為神，直到把人模成祂的形像，和祂完全一樣。（林後三１８，）祂的形像就是神而人者。不錯，祂是人活在地上，但祂不憑着祂那個人的生命活着，祂乃是憑着神作祂的生命而活着。所以祂拒絕自己，否認自己。祂三十三年半在地上，天天都是過一個否認自己，拒絕自己，而憑神活着的人。這種生活就是在十字架下過復活的生命。所以就着基督來說，在祂到十字架上去死而復活以前，祂天天都是過着死而復活的生活。死就是拒絕自己，把自己擺在死地，復活就是把神當作生命活出來。所活出來的雖然是人的生活，可是所顯出來的美德乃是神的屬性所變成的。</p>
+
+<h2 id="耶穌在地上的生活乃是神人共同生活的典型">耶穌在地上的生活，乃是神人共同生活的典型</h2>
+<p>主耶穌真正是個人活在地上，但祂不憑祂那個人的生命活着，祂乃是憑神作祂的生命而活着。這樣，祂就在祂的生命中、並在祂的生活中，把神的屬性活成祂這個人的美德，顯在人眼前。你在外面看祂是人，但是你越觀察祂，越跟從祂，你就要說祂實在是神。在四福音裏我們看見，那些加利利人跟從主三年半。開頭的時候，他們覺得祂是個木匠的兒子，是一個人。慢慢的，他們越看，主耶穌身上的美德就越顯出來。這些美德決不是人能有的。那這些美德從那裏來的？當日加利利人不曉得，今天我們曉得，那些美德乃是神人耶穌這個人，不憑自己活着，卻憑神活着，就把神的屬性活出來。所顯出來的，就是那位神而人者的美德。</p>
+
+<h2 id="人成為神的生活是在十字架下過死而復活的生活">人成為神的生活，是在十字架下過死而復活的生活</h2>
+<p>主把一個典型的神而人者，實實際際的活出來之後，就去死而復活，完成救贖，把我們救贖了，又把我們重生了，並且把我們生的和祂一樣。我們與祂乃是同生命、同性情。這樣，我們就成為神，成了神的兒女。但是我們身上還有許多消極的東西。感謝主，在祂的死裏，祂把這些消極的東西都解決了。祂到十字架上去，是帶着我們肉體去的，也是帶着我們犯罪的人性去的。祂把我們都在十字架上解決了。我們的舊人已經與祂同釘十字架，所以這個舊人身上掛着的舊造、肉體、撒但、世界，也都在十字架上解決了。今天我們旣是得了重生，就絕不能再有分於這些東西，不能再憑着這些東西活着。我們乃是拒絕我們的自己，像主耶穌拒絕祂的自己一樣。我們的自己是敗壞的，是敗壞到不可醫治的。基督自己是一點惡也沒有，祂自己是絕對善的，連祂那善的己都需要擺在一邊，何況我們惡的己，豈不更需要擺在一邊麼？所以今天我們要有基督身體的實際，就必須活神人的生活。我們要活神人的生活，就必須接受十字架。</p>
+
+<h2 id="不再是我單獨活着乃是神我共同生活">不再是我單獨活着，乃是神我共同生活</h2>
+<p>我們活出神人的路，就是死而復活。我們天天沒有一秒鐘不是在死，我們天天沒有一秒鐘不是在憑着裏面賜生命的靈而活。按我作基督徒的經歷，開頭的時候，在我沒有得到倪弟兄的幫助之先，我雖然有追求，卻一點都不懂得甚麼是生命的經歷。我受了弟兄會七年半的教導，都是教導那些外面的皮毛。從我接觸倪弟兄以後，我就知道我需要死，我需要留在十字架上，我需要隨從聖靈而活着。慢慢的，在主的恢復裏，主就給我看見，還不只這麼多，這個還不彀。你還必須看見，今天主所要的基督徒的生活，乃是你整天每分每秒鐘都在死之下，和住在你裏面的三一神、那是靈的基督、那賜生命的靈，同生命，同生活。</p>
+
+<h2 id="基督活着我們也要因祂活着">基督活着，我們也要因祂活着</h2>
+<p>主耶穌在約翰十四章十六至十七節對門徒們說，『我要求父，祂必賜給你們另一位保惠師，叫祂永遠與你們同在，就是實際的靈…』在十九節主又說，『因為我活着，你們也要活着。』乃是到主復活的那一天，門徒就知道，主活着，他們也要活着。但他們活着，和從前未與基督同釘十字架時的活着，是不同的。從前的活着是憑他們自己的生命活着，現在與基督同釘十字架以後的活着，乃是憑那叫他們復活的三一神的生命活着。在約翰六章五十七節，連神所差來的基督都說，『活的父怎樣差我來，我又因父活着，』基督乃是因父活着，就是說祂不憑着自己活着。這個『因』字，希臘文的意義很難確定。有些譯本就繙成憑父活着。但這樣的繙譯並不對。達祕對這字的註解說，這個字在這裏，不是『憑着』的意思，也不只是『藉着』、『因為』、『因着』的意思。主受父的差遣，有一個使命，就是來把父活出來。所以主旣受父的差遣，就來把父活出來。父差遣主就是因這個緣故。達祕又說，這裏是指着神所是的，以及神所生活的說的。神有祂的所是，也有祂的生活。子受差遣來的使命，就是把神的所是，和神的生活活出來。主在約翰六章五十七節接着說，『照樣，那喫我的人，也要因我活着。』因主活着，就是把主的所是，和主的生活活出來。 基督復活了，靈進到我們裏面來了，到那時候，因祂活着，我們也活着。祂活着，我們也因祂活着，因為祂與我們、我們與祂一同活着。所以在復活裏，祂和我們，我們和祂，完全聯結相調為一。因此保羅纔說，『在我，活着就是基督，』（腓一２１。）又說，『總叫基督在我身體上，現今也照常顯大。』（腓一２０。）保羅活着，但是所顯出來的不是保羅，所顯出來的乃是基督。當初耶穌活着，但是所顯出來的不是耶穌，不是拿撒勒的木匠，所顯出來的乃是神；耶穌人性的美德所彰顯出來的，乃是神的屬性。這個活出來的，就是神與人聯結相調而成的神人。這個神人在基督的復活裏擴大了。原來是一個兒子，現在擴大為長子和眾子。這個擴大是一個生機體，這個生機體就是基督的身體。</p>
+
+<h2 id="基督身體的實際就是神人聯結相調活出一個團體的神人">基督身體的實際就是神人聯結相調，活出一個團體的神人</h2>
+<p>基督的身體不光是一個辭句，乃是一個實際。基督身體的實際就是神人聯結相調，活出一個團體的神人。為此我們必須經過死而復活，天天死，天天復活。我們也必須天天在靈裏，照着靈而行。我再說一點我自己的經歷。這些年來我自己覺得還算可以，但最近主給我看見，我雖然告訴弟兄姊妹，神的百姓是神的妻子，應該以神作丈夫。雖然我講得頭頭是道，而實際上我自己的生活，並不是以神我作丈夫，而是以我自己作丈夫，因為我是照着道德的水準對我的妻子不作壞事，也不說壞話，然而我不是以神作丈夫，憑着祂說話。我乃是自己作了丈夫，憑自己說話，憑自己談工作。最近因着我看見的大異象，我就天天在操練，當我要對人說話的時候，裏頭就說，『這是你要說，還是你的丈夫要說？』換句話說，『這是你自己要說，還是住在裏面的那靈要說？你這樣說話，是不是在那靈裏作？是不是照着那靈說？』如果我們都用這個標準來衡量，我們就會看見，我們差得太遠了。我們雖然看見基督身體的這個異象，也講得很清楚，但是基督身體的實際，我們所有的只不過是寥寥一點。</p>
+
+<h2 id="身體的一就是那靈">身體的一就是那靈</h2>
+<p>活出基督身體實際的路，就是神人聯結共同生活，經過死而復活。死把我們這一面的一切都清理了，復活把我們的人性提高，而把我們生為神的眾子。現在我們雖然是神的兒女，但是我們身上還掛着許多消極的東西，因此我們天天不能離開十字架。我們必須天天死，時時死，一切都死。 我們怎樣保守身體的一？這個一是甚麼？這個一就是那靈。因此以弗所四章四節纔說，『一個身體和一位靈。』這就是身體的一。你一在靈裏，你就保守這個一，你一不在靈裏，你說不是分裂也是分裂。</p>
+
+<h2 id="警告與提防">警告與提防</h2>
+<p>我們在工作上只有勞苦，不要展揚誇耀自己的工作，不要戀棧居功。我們走了就是走了，甚麼都交給別人。我們之所以這樣作，沒有雄心，沒有誇獎，沒有比較，沒有指責錯誤，是因為我們看見了身體。結果我們今天所作的，不是我們個人的工作，乃是神歷代的經綸，就是建造基督的身體。主能藉着我們和別人的聯結，而把神而人者的生命活出來。所以新詩第三節說，『不再是我單獨活着，乃是神我共同生活；並與眾聖神裏配搭，建成三一宇宙之家，且成基督生機身體，作祂顯身團體大器。』這就是基督身體的實際。 我們若看見了這個，我們就不會注意外面的作法。一切若不經過死而復活，就都是舊造的；作得不對是舊造，作得對也是舊造，都是毫無價值。在事奉神的事上，我們要看見，第一，神是輕慢不得的，第二，神在宇宙間，不光有物質方面的定律，也有屬靈方面的定律；並且屬靈方面的定律更是嚴謹的。所以我們一摸着神屬靈的工作，就非受祂的定律限制不可；只要稍微差一點，我們就了了。正如在場上賽跑一樣，你必須在那兩條線之間跑，你一踏了白線，你就出線了；你卽使悔改也不行。這是真的。 無論你作甚麼，傳福音也罷，下鄉也罷，去美國也罷，作訓練也罷，千萬不要看你作的比別人高；也不要與別人比較，覺得你作的不如別人高，你裏面就灰心。這些都不能有。我們只知道勞苦，只知道天天死，天天復活，天天在靈裏行動，就是照着靈而行；其他的一切，我能在這裏作見證，是主負責。<br />
+摘自《異象的高峰與基督身體的實際》</p>
+
+            </div>
+          </article>
+        </main>
+      </div>
+    </div>
+    <!-- #content -->
+
+    <!-- FOOTER -->
+<footer id="colophon" class="site-footer" role="contentinfo">
+  <div class="site-info">
+    <div class="copyright">
+      Copyright &copy; 2025
+      <a href="/" title="臺灣福音工作全練網站">
+        <span>臺灣福音工作全時間訓練網站</span>
+      </a>
+      <br>
+      All rights reserved. | Static Jekyll site converted from original WordPress site
+    </div>
+  </div>
+</footer>
+<!-- #colophon -->
+
+    <a href="#masthead" id="scroll-up"><span class="genericon genericon-collapse"></span></a>
+  </div>
+  <!-- #page -->
+
+  <script src="/static-page/assets/js/main.js"></script>
+
+</body>
+
+</html>

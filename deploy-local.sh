@@ -18,4 +18,4 @@ echo ""
 echo "Press Ctrl+C to stop the server"
 echo ""
 
-bundle exec jekyll serve --config _config.yml,_config.local.yml
+bundle exec jekyll serve --host 0.0.0.0 --config _config.yml,_config.local.yml

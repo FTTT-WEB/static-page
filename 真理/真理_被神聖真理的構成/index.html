@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>真理 – 被神聖真理的構成 - 臺灣福音工作全時間訓練網站</title>
+  <!-- CSS - Using baseurl-prefixed paths for GitHub Pages -->
+
+  <!-- <link rel="stylesheet" href="/static-page/assets/theme/style32d4.css">
+  <link rel="stylesheet" href="/static-page/assets/theme/genericons/genericons3d36.css"> -->
+  <link rel="stylesheet" href="/static-page/assets/css/main.css">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Roboto', 'Merriweather', Arial, sans-serif;
+      color: #333;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    a {
+      color: #b54434;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: #8b3426;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .site-title,
+    .site-description {
+      position: absolute;
+      clip: rect(1px, 1px, 1px, 1px);
+    }
+
+    /* =============== HEADER STYLES =============== */
+    #masthead {
+      background-color: #fff;
+      padding: 15px 0;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      position: relative;
+      z-index: 100;
+      width: 100%;
+    }
+
+    .header-wrap {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 15px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .site-branding {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex: 0 1 auto;
+      min-width: 0;
+    }
+
+    .site-branding img {
+      max-height: 50px;
+      width: auto;
+      flex-shrink: 0;
+    }
+
+    .site-branding h1 {
+      margin: 0;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 1.2;
+      word-break: break-word;
+    }
+
+    .site-branding a {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+
+    /* =============== NAVIGATION STYLES =============== */
+    #site-navigation {
+      flex: 1 1 100%;
+      width: 100%;
+      order: 3;
+    }
+
+    .main-navigation ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0;
+      background-color: #fafafa;
+      border-top: 1px solid #eee;
+    }
+
+    .main-navigation>ul>li {
+      position: relative;
+      flex: 0 0 auto;
+      border-right: 1px solid #eee;
+    }
+
+    .main-navigation>ul>li:last-child {
+      border-right: none;
+    }
+
+    .main-navigation a {
+      display: block;
+      padding: 12px 14px;
+      text-decoration: none;
+      color: #333;
+      font-size: 14px;
+      transition: all 0.3s ease;
+      white-space: nowrap;
+    }
+
+    .main-navigation a:hover {
+      background-color: #b54434;
+      color: #fff;
+    }
+
+    .main-navigation .sub-menu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #fff;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      min-width: 200px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+      z-index: 1000;
+      border: 1px solid #eee;
+    }
+
+    .main-navigation li:hover>.sub-menu {
+      display: block;
+    }
+
+    .main-navigation .sub-menu li {
+      border-bottom: 1px solid #eee;
+    }
+
+    .main-navigation .sub-menu li:last-child {
+      border-bottom: none;
+    }
+
+    .main-navigation .sub-menu a {
+      padding: 12px 20px;
+      color: #333;
+      white-space: normal;
+    }
+
+    /* =============== CONTENT STYLES =============== */
+    #content {
+      background-color: #EAEAEA;
+      padding: 30px 0;
+      width: 100%;
+    }
+
+    .inner-wrap {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 15px;
+    }
+
+    .site-main {
+      background-color: #fff;
+      padding: 25px;
+      border-radius: 4px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+
+    .entry-content {
+      line-height: 1.8;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+    }
+
+    .entry-content h2 {
+      color: #b54434;
+      margin: 30px 0 15px 0;
+      font-size: 22px;
+      border-bottom: 2px solid #b54434;
+      padding-bottom: 10px;
+      line-height: 1.3;
+    }
+
+    .entry-content h3 {
+      color: #666;
+      margin: 20px 0 10px 0;
+      font-size: 18px;
+      line-height: 1.3;
+    }
+
+    .entry-content h4 {
+      color: #888;
+      margin: 15px 0 8px 0;
+      font-size: 16px;
+    }
+
+    .entry-content p {
+      margin: 0 0 15px 0;
+    }
+
+    .entry-content iframe {
+      max-width: 100%;
+      width: 100%;
+      height: auto;
+      margin: 20px 0;
+      border: none;
+      border-radius: 4px;
+      aspect-ratio: 16/9;
+    }
+
+    .entry-content img {
+      max-width: 100%;
+      height: auto;
+      margin: 20px 0;
+      border-radius: 4px;
+      display: block;
+    }
+
+    .entry-content ul,
+    .entry-content ol {
+      margin: 15px 0;
+      padding-left: 30px;
+    }
+
+    .entry-content li {
+      margin: 8px 0;
+    }
+
+    .entry-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      overflow-x: auto;
+    }
+
+    .entry-content table th,
+    .entry-content table td {
+      padding: 12px;
+      border: 1px solid #ddd;
+      text-align: left;
+    }
+
+    .entry-content table th {
+      background-color: #f5f5f5;
+      font-weight: 600;
+    }
+
+    .entry-content strong {
+      font-weight: 600;
+      color: #333;
+    }
+
+    /* =============== FOOTER STYLES =============== */
+    #colophon {
+      background-color: #333;
+      color: #fff;
+      padding: 30px 0;
+      margin-top: 40px;
+      width: 100%;
+    }
+
+    .site-info {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 15px;
+      text-align: center;
+      font-size: 13px;
+    }
+
+    .copyright {
+      line-height: 1.8;
+    }
+
+    .copyright a {
+      color: #b54434;
+    }
+
+    blockquote {
+      border-color: #EAEAEA #EAEAEA #EAEAEA #b54434;
+      border-left: 4px solid #b54434;
+      padding: 15px 20px;
+      margin: 20px 0;
+      color: #666;
+      background-color: #f9f9f9;
+      border-radius: 4px;
+    }
+    
+    .entry-content .will-red {
+      color: #b54434; 
+    }
+
+    /* =============== RESPONSIVE DESIGN =============== */
+
+    /* Tablets (768px and up) */
+    @media (min-width: 768px) {
+      body {
+        font-size: 16px;
+      }
+
+      .header-wrap {
+        flex-wrap: nowrap;
+      }
+
+      #site-navigation {
+        flex: 1 1 auto;
+        order: 2;
+        width: auto;
+        border-top: none;
+      }
+
+      .main-navigation ul {
+        border-top: none;
+        background-color: transparent;
+      }
+
+      .main-navigation>ul>li {
+        border-right: none;
+      }
+
+      .site-main {
+        padding: 40px;
+      }
+
+      .entry-content h2 {
+        font-size: 26px;
+      }
+
+      .entry-content h3 {
+        font-size: 20px;
+      }
+    }
+
+    /* Large screens (1024px and up) */
+    @media (min-width: 1024px) {
+      .header-wrap {
+        padding: 0 30px;
+      }
+
+      .inner-wrap {
+        padding: 0 30px;
+      }
+
+      .site-branding img {
+        max-height: 60px;
+      }
+
+      .site-branding h1 {
+        font-size: 18px;
+      }
+
+      #content {
+        padding: 40px 0;
+      }
+
+      .site-main {
+        padding: 50px;
+      }
+    }
+
+    /* Small phones (less than 480px) */
+    @media (max-width: 479px) {
+      body {
+        font-size: 14px;
+      }
+
+      .header-wrap {
+        padding: 0 10px;
+      }
+
+      .site-branding h1 {
+        font-size: 14px;
+      }
+
+      .site-branding img {
+        max-height: 40px;
+      }
+
+      .main-navigation a {
+        padding: 10px 8px;
+        font-size: 13px;
+      }
+
+      .main-navigation .sub-menu a {
+        padding: 10px 15px;
+      }
+
+      .main-navigation .sub-menu {
+        min-width: 160px;
+      }
+
+      .site-main {
+        padding: 15px;
+      }
+
+      .entry-content h2 {
+        font-size: 18px;
+        margin: 20px 0 12px 0;
+      }
+
+      .entry-content h3 {
+        font-size: 16px;
+      }
+
+      .entry-content iframe {
+        margin: 15px 0;
+      }
+
+      #colophon {
+        padding: 20px 0;
+      }
+
+      .site-info {
+        font-size: 12px;
+      }
+    }
+
+    /* Medium phones (480px to 767px) */
+    @media (min-width: 480px) and (max-width: 767px) {
+      .header-wrap {
+        padding: 0 12px;
+      }
+
+      .inner-wrap {
+        padding: 0 12px;
+      }
+
+      .main-navigation a {
+        padding: 11px 12px;
+        font-size: 13px;
+      }
+
+      .site-main {
+        padding: 20px;
+      }
+
+      .entry-content h2 {
+        font-size: 20px;
+      }
+    }
+
+    /* Landscape orientation (any width, height < width) */
+    @media (orientation: landscape) and (max-height: 500px) {
+      #masthead {
+        padding: 10px 0;
+      }
+
+      .site-branding h1 {
+        font-size: 14px;
+      }
+
+      .main-navigation a {
+        padding: 8px 12px;
+      }
+    }
+
+    /* Print styles */
+    @media print {
+
+      #masthead,
+      #colophon {
+        display: none;
+      }
+
+      #content {
+        background-color: #fff;
+        padding: 0;
+      }
+
+      .site-main {
+        box-shadow: none;
+        padding: 0;
+      }
+
+      a {
+        color: #000;
+      }
+    }
+    
+    .entry-content h5.will-red {
+      color: #c00;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body class="page-template-default page wp-embed-responsive wp-theme-radiate">
+
+  <div id="parallax-bg"></div>
+  <div id="page" class="hfeed site">
+    <!-- <a class="skip-link screen-reader-text" href="#content">Skip to content</a> -->
+
+    <!-- HEADER -->
+<header id="masthead" class="site-header" role="banner">
+  <div class="header-wrap clearfix">
+    <div class="site-branding">
+      <a href="/static-page/" rel="home">
+        <img src="/static-page/assets/images/臺灣福音工作全時間訓練-logo.png" alt="臺灣福音工作全時間訓練 logo">
+      </a>
+      <h1 class="site-title"><a href="/static-page/" title="臺灣福音工作全時間訓練網站" rel="home">臺灣福音工作全時間訓練網站</a></h1>
+    </div>
+
+    <!-- NAVIGATION MENU -->
+    <nav id="site-navigation" class="main-navigation" role="navigation">
+      <h4 class="menu-toggle"></h4>
+      <ul class="clearfix">
+        <!-- <li class="menu-item"><a href="/static-page/">首頁</a></li> -->
+
+        <li class="menu-item menu-item-has-children">
+          <a href="/static-page/關於訓練/">關於訓練</a>
+          <ul class="sub-menu">
+            <li class="menu-item"><a href="/static-page/訓練沿革/">訓練沿革</a></li>
+            <li class="menu-item"><a href="/static-page/訓練目的與目標/">訓練目的與目標</a></li>
+            <li class="menu-item"><a href="/static-page/課程介紹/">課程介紹</a></li>
+            <li class="menu-item menu-item-has-children">
+              <a href="/static-page/訓練生活/">訓練生活</a>
+              <ul class="sub-menu">
+                <li class="menu-item"><a href="/static-page/訓練生活/簿本操練">簿本操練</a></li>
+                <li class="menu-item"><a href="/static-page/訓練生活/#訓練生活分享">訓練生活分享</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+
+        <li class="menu-item menu-item-has-children">
+          <a href="/static-page/訓練八方面/">訓練八方面</a>
+          <ul class="sub-menu">
+            <li class="menu-item"><a href="/static-page/職事/">職事</a></li>
+            <li class="menu-item"><a href="/static-page/真理/">真理</a></li>
+            <li class="menu-item"><a href="/static-page/生命/">生命</a></li>
+            <li class="menu-item"><a href="/static-page/事奉/">事奉</a></li>
+            <li class="menu-item"><a href="/static-page/基督的身體/">基督的身體</a></li>
+            <li class="menu-item"><a href="/static-page/性格/">性格</a></li>
+            <li class="menu-item"><a href="/static-page/心志/">心志</a></li>
+            <li class="menu-item"><a href="/static-page/語言/">語言</a></li>
+          </ul>
+        </li>
+
+        <li class="menu-item"><a href="/static-page/參加訓練/">參加訓練</a></li>
+        <li class="menu-item"><a href="/static-page/參加青職短期訓練/">青職短期訓練</a></li>
+        <li class="menu-item"><a href="/static-page/參加短期訓練/">參加短期訓練</a></li>
+        <li class="menu-item"><a href="/static-page/影音專區/">影音專區</a></li>
+        <li class="menu-item"><a href="/static-page/相關資訊/">相關資訊</a></li>
+      </ul>
+    </nav>
+    <!-- #site-navigation -->
+  </div>
+  <!-- .inner-wrap header-wrap -->
+</header>
+<!-- #masthead -->
+
+    <!-- MAIN CONTENT -->
+    <div id="content" class="site-content">
+      <div class="inner-wrap clearfix">
+        <main id="main" class="site-main">
+          <article class="post page">
+            <div class="entry-content">
+              <h2 id="真理相關文章-被神聖真理的構成">真理相關文章-被神聖真理的構成</h2>
+
+<p>被神聖真理的構成 聖經先是寫成的，然後繙譯出來，最後解釋並說明出來。照着我們的老路，我們有許多人多年聽解釋聖經的信息，但當我們去接觸人的時候，我們仍然不知道要說甚麼。這就是為甚麼我說，我們需要跟從在臺灣的眾聖徒的榜樣，實行『禱研背講』–禱讀、研讀、背誦、講說（申言）。這些是需要時間的。我們的禱讀不可輕率。然後我們需要逐字、逐辭、逐句的研讀真理。譬如，約翰一章一節說，『太初有話，話與神同在，話就是神。』然後十四節說，話成了肉體，支搭帳幕在我們中間，豐豐滿滿的有恩典，有實際。許多人讀了這些經節，並不明白。這就是為甚麼需要有人將聖經的話向我們解釋出來。 我們的研讀，叫我們得着裝備，能向別人解釋聖經。藉着我多年以來研讀聖經，我看見恩典乃是神給我們得着並享受，實際乃是神給我們實化。我們必須得着祂、接受祂、並享受祂作恩典；然後我們必須實化祂作實際。雖然像這樣的一些點，已經在我們的生命讀經中說得很清楚，但我們可能不注意研讀。我們要被真理所構成，就需要禱讀，然後研讀。禱讀約翰一章一節和十四節這樣的經節，就能立下很好的根基。然後我們可以用生命讀經為幫助，研讀這些經節中的要點。有了這個幫助，我們就能找出，恩典和實際是甚麼。我們必須逐字、逐辭、逐句的研讀真理。自然而然的，我們就會背誦我們所禱讀、所研讀的。除了我們個人的研讀之外，我們也需要與別人一同研讀。在大聚會裏，這種研讀是無法作到的；但在六到十位（不超過十位）聖徒的活力排裏，就能彼此相互的實行出來。 我們承受了很多已往對神話語的解釋，我們也有整本聖經的生命讀經。然後主更進一步的帶領我們有結晶讀經。在結晶讀經裏，我不僅像已往講生命讀經一樣，花時間講信息，也要花時間寫綱目。我們必須禱讀、研讀、背誦、申言這些綱目的點。如果我們得了裝備，能背誦綱目，我們就自然而然的知道如何申言。最近感恩節特會第一篇綱目的第貳點說，『祂〔基督〕藉着成為肉體所穿上的人性，成了遮藏祂神性之榮耀的外殼。』太初有話，話就是神，這話成了肉體，而這肉體乃是遮藏基督神性之榮耀的外殼。因此，特會的第一句標語說，『基督神性的榮耀，原藏在祂裏面，如同藏在一粒麥種之內。』麥種的外殼將麥種的生命和豐富遮藏起來。我們若用這樣的點來申言，我們所接觸的人就會想要聽我們所說的。這種禱讀、研讀、背誦、講說–禱研背講–的新路，已經傳到許多地方。我在這裏所說的，乃是對眾召會的一種指導。我的新路是禱、研、背、講。這是給我們烹調並喫最近幾年所釋放之豐富的路。 要來的冬季訓練，有一部分是羅馬書中神完整救恩的結晶讀經。羅馬五章十節說，『因為我們作仇敵的時候，且藉着神兒子的死得與神和好，旣已和好，就更要在祂的生命裏得救了。』我們該禱讀並研讀這一節。這裏的主詞『我們』，是指信徒。我們曾是神的仇敵，但我們藉着神兒子的死得與神和好了。神兒子的死是為着我們法理的救贖。在基督生命中的得救，是為着我們生機的拯救。我們必須研讀這些點，然後背誦這些點。這樣，我們就得着裝備來申言。 我們應當用我們所能背誦的來申言；我們所能背誦的，是我們研讀過的；我們所研讀過的，是我們禱讀過的。我們若不禱、研、背，就無法講說、申言。我曾鼓勵人在主日聚會中申言，但他們仍然說，他們不知道要說甚麼。現在我們有一條新路。如果我們禱、研、背、講結晶讀經中所講的綱目，我們必定能申言。誰不能申言？乃是那些不禱讀綱目，不研讀綱目，不背誦綱目的人。從週一到週六，我們若每天操練禱、研、背，在主日召會的聚會中，我們就必定會講說、申言。在講這篇信息之前，我研讀行傳八章腓利遇見太監的事。三十二至三十五節說，『他所念的那段經乃是，「祂像羊被牽去宰殺，又像羊羔在剪毛的人面前無聲，祂也是這樣不開口。祂卑微的時候，人不按公義審判祂；誰能述說祂的世代？因為祂的生命從地上被奪去。」太監對腓利說，請問，申言者說這話是指着誰？是指着自己，還是指着別人？腓利就開口，從這經上起，向他傳耶穌為福音。』這是腓利的傳福音。 在行傳八章的這件事給我們看見，禱、研、背、講的實行不是我們的新路。這條路早已經在聖經裏，就是在行傳八章。腓利回答太監的方式，以及他向太監傳基督為福音的方式，指明腓利曾經研讀過以賽亞五十三章，太監所引的那一段話；他也必定記得那一段話，所以用申言的方式，傳基督為福音。如果他對聖言的那一部分不熟習，他怎能根據那一段話，傳基督為福音？他的傳講，乃是他將他所熟習的聖言，實際的申言出來。 一個人到主日上午的聚會中，若沒有豫備好申言，這就指明他整周都是懶惰的。一周之中，他沒有禱、研、背。他若操練禱、研、背，他就能在主日申言。我們讀了這篇信息之後，可能覺得在召會裏的標準太高了。就一面的意義說，這是對的，因為我們是在主的恢復裏。我們不願留在墮落的基督教裏。在天主教裏的人，只需要去望彌撒；他們不必盡功用。在更正教裏的人，大部分是聽道。他們在聚會中不必為主說話。主的恢復卻不一樣。 基督身體的眾肢體，都該是為主說話，盡功用的肢體。所以我們需要實行禱、研、背、講。我們必須禱讀、研讀，並且背誦我們所研讀的要點。然後我們所禱讀、研讀和背誦的，就會自然而然的成為我們的申言。我們許多人喜歡聽一些有口纔的弟兄講話。這給我們看見，要改變我們的頭腦是不容易的，因為我們的頭腦仍然受基督教的影響。 使徒約翰的着作是由異象中的啟示所組成的。只有新約的著者得着這樣從神而來，在異象中的啟示。他們將所看見的寫在新約中，並且傳給了我們。我們必須解釋他們所看見的。在約翰一章的結晶讀經中，我們指出，那是神的話成了肉體。（1，14。）在肉體裏，祂成了羔羊，（29，）然後在復活裏，祂成了鴿子。（32。）拿但業承認祂是神的兒子。主於是向拿但業啟示，祂不僅是神子，祂也是人子，神的使者要在祂身上，上去下來。（49～51。）我們必須研讀、背誦這些點，我們就能講說這些點。藉着這條路，我們就得着裝備，能用基督那追測不盡的豐富去餧養人。</p>
+
+<p>摘自《活力排》</p>
+
+            </div>
+          </article>
+        </main>
+      </div>
+    </div>
+    <!-- #content -->
+
+    <!-- FOOTER -->
+<footer id="colophon" class="site-footer" role="contentinfo">
+  <div class="site-info">
+    <div class="copyright">
+      Copyright &copy; 2025
+      <a href="/" title="臺灣福音工作全練網站">
+        <span>臺灣福音工作全時間訓練網站</span>
+      </a>
+      <br>
+      All rights reserved. | Static Jekyll site converted from original WordPress site
+    </div>
+  </div>
+</footer>
+<!-- #colophon -->
+
+    <a href="#masthead" id="scroll-up"><span class="genericon genericon-collapse"></span></a>
+  </div>
+  <!-- #page -->
+
+  <script src="/static-page/assets/js/main.js"></script>
+
+</body>
+
+</html>

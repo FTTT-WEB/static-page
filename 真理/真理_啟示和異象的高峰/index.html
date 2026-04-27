@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>真理 – 啟示和異象的高峰—『神成為人，人成為神』 - 臺灣福音工作全時間訓練網站</title>
+  <!-- CSS - Using baseurl-prefixed paths for GitHub Pages -->
+
+  <!-- <link rel="stylesheet" href="/static-page/assets/theme/style32d4.css">
+  <link rel="stylesheet" href="/static-page/assets/theme/genericons/genericons3d36.css"> -->
+  <link rel="stylesheet" href="/static-page/assets/css/main.css">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Roboto', 'Merriweather', Arial, sans-serif;
+      color: #333;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    a {
+      color: #b54434;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: #8b3426;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .site-title,
+    .site-description {
+      position: absolute;
+      clip: rect(1px, 1px, 1px, 1px);
+    }
+
+    /* =============== HEADER STYLES =============== */
+    #masthead {
+      background-color: #fff;
+      padding: 15px 0;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      position: relative;
+      z-index: 100;
+      width: 100%;
+    }
+
+    .header-wrap {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 15px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .site-branding {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex: 0 1 auto;
+      min-width: 0;
+    }
+
+    .site-branding img {
+      max-height: 50px;
+      width: auto;
+      flex-shrink: 0;
+    }
+
+    .site-branding h1 {
+      margin: 0;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 1.2;
+      word-break: break-word;
+    }
+
+    .site-branding a {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+
+    /* =============== NAVIGATION STYLES =============== */
+    #site-navigation {
+      flex: 1 1 100%;
+      width: 100%;
+      order: 3;
+    }
+
+    .main-navigation ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0;
+      background-color: #fafafa;
+      border-top: 1px solid #eee;
+    }
+
+    .main-navigation>ul>li {
+      position: relative;
+      flex: 0 0 auto;
+      border-right: 1px solid #eee;
+    }
+
+    .main-navigation>ul>li:last-child {
+      border-right: none;
+    }
+
+    .main-navigation a {
+      display: block;
+      padding: 12px 14px;
+      text-decoration: none;
+      color: #333;
+      font-size: 14px;
+      transition: all 0.3s ease;
+      white-space: nowrap;
+    }
+
+    .main-navigation a:hover {
+      background-color: #b54434;
+      color: #fff;
+    }
+
+    .main-navigation .sub-menu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #fff;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      min-width: 200px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+      z-index: 1000;
+      border: 1px solid #eee;
+    }
+
+    .main-navigation li:hover>.sub-menu {
+      display: block;
+    }
+
+    .main-navigation .sub-menu li {
+      border-bottom: 1px solid #eee;
+    }
+
+    .main-navigation .sub-menu li:last-child {
+      border-bottom: none;
+    }
+
+    .main-navigation .sub-menu a {
+      padding: 12px 20px;
+      color: #333;
+      white-space: normal;
+    }
+
+    /* =============== CONTENT STYLES =============== */
+    #content {
+      background-color: #EAEAEA;
+      padding: 30px 0;
+      width: 100%;
+    }
+
+    .inner-wrap {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 15px;
+    }
+
+    .site-main {
+      background-color: #fff;
+      padding: 25px;
+      border-radius: 4px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+
+    .entry-content {
+      line-height: 1.8;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+    }
+
+    .entry-content h2 {
+      color: #b54434;
+      margin: 30px 0 15px 0;
+      font-size: 22px;
+      border-bottom: 2px solid #b54434;
+      padding-bottom: 10px;
+      line-height: 1.3;
+    }
+
+    .entry-content h3 {
+      color: #666;
+      margin: 20px 0 10px 0;
+      font-size: 18px;
+      line-height: 1.3;
+    }
+
+    .entry-content h4 {
+      color: #888;
+      margin: 15px 0 8px 0;
+      font-size: 16px;
+    }
+
+    .entry-content p {
+      margin: 0 0 15px 0;
+    }
+
+    .entry-content iframe {
+      max-width: 100%;
+      width: 100%;
+      height: auto;
+      margin: 20px 0;
+      border: none;
+      border-radius: 4px;
+      aspect-ratio: 16/9;
+    }
+
+    .entry-content img {
+      max-width: 100%;
+      height: auto;
+      margin: 20px 0;
+      border-radius: 4px;
+      display: block;
+    }
+
+    .entry-content ul,
+    .entry-content ol {
+      margin: 15px 0;
+      padding-left: 30px;
+    }
+
+    .entry-content li {
+      margin: 8px 0;
+    }
+
+    .entry-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      overflow-x: auto;
+    }
+
+    .entry-content table th,
+    .entry-content table td {
+      padding: 12px;
+      border: 1px solid #ddd;
+      text-align: left;
+    }
+
+    .entry-content table th {
+      background-color: #f5f5f5;
+      font-weight: 600;
+    }
+
+    .entry-content strong {
+      font-weight: 600;
+      color: #333;
+    }
+
+    /* =============== FOOTER STYLES =============== */
+    #colophon {
+      background-color: #333;
+      color: #fff;
+      padding: 30px 0;
+      margin-top: 40px;
+      width: 100%;
+    }
+
+    .site-info {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 15px;
+      text-align: center;
+      font-size: 13px;
+    }
+
+    .copyright {
+      line-height: 1.8;
+    }
+
+    .copyright a {
+      color: #b54434;
+    }
+
+    blockquote {
+      border-color: #EAEAEA #EAEAEA #EAEAEA #b54434;
+      border-left: 4px solid #b54434;
+      padding: 15px 20px;
+      margin: 20px 0;
+      color: #666;
+      background-color: #f9f9f9;
+      border-radius: 4px;
+    }
+    
+    .entry-content .will-red {
+      color: #b54434; 
+    }
+
+    /* =============== RESPONSIVE DESIGN =============== */
+
+    /* Tablets (768px and up) */
+    @media (min-width: 768px) {
+      body {
+        font-size: 16px;
+      }
+
+      .header-wrap {
+        flex-wrap: nowrap;
+      }
+
+      #site-navigation {
+        flex: 1 1 auto;
+        order: 2;
+        width: auto;
+        border-top: none;
+      }
+
+      .main-navigation ul {
+        border-top: none;
+        background-color: transparent;
+      }
+
+      .main-navigation>ul>li {
+        border-right: none;
+      }
+
+      .site-main {
+        padding: 40px;
+      }
+
+      .entry-content h2 {
+        font-size: 26px;
+      }
+
+      .entry-content h3 {
+        font-size: 20px;
+      }
+    }
+
+    /* Large screens (1024px and up) */
+    @media (min-width: 1024px) {
+      .header-wrap {
+        padding: 0 30px;
+      }
+
+      .inner-wrap {
+        padding: 0 30px;
+      }
+
+      .site-branding img {
+        max-height: 60px;
+      }
+
+      .site-branding h1 {
+        font-size: 18px;
+      }
+
+      #content {
+        padding: 40px 0;
+      }
+
+      .site-main {
+        padding: 50px;
+      }
+    }
+
+    /* Small phones (less than 480px) */
+    @media (max-width: 479px) {
+      body {
+        font-size: 14px;
+      }
+
+      .header-wrap {
+        padding: 0 10px;
+      }
+
+      .site-branding h1 {
+        font-size: 14px;
+      }
+
+      .site-branding img {
+        max-height: 40px;
+      }
+
+      .main-navigation a {
+        padding: 10px 8px;
+        font-size: 13px;
+      }
+
+      .main-navigation .sub-menu a {
+        padding: 10px 15px;
+      }
+
+      .main-navigation .sub-menu {
+        min-width: 160px;
+      }
+
+      .site-main {
+        padding: 15px;
+      }
+
+      .entry-content h2 {
+        font-size: 18px;
+        margin: 20px 0 12px 0;
+      }
+
+      .entry-content h3 {
+        font-size: 16px;
+      }
+
+      .entry-content iframe {
+        margin: 15px 0;
+      }
+
+      #colophon {
+        padding: 20px 0;
+      }
+
+      .site-info {
+        font-size: 12px;
+      }
+    }
+
+    /* Medium phones (480px to 767px) */
+    @media (min-width: 480px) and (max-width: 767px) {
+      .header-wrap {
+        padding: 0 12px;
+      }
+
+      .inner-wrap {
+        padding: 0 12px;
+      }
+
+      .main-navigation a {
+        padding: 11px 12px;
+        font-size: 13px;
+      }
+
+      .site-main {
+        padding: 20px;
+      }
+
+      .entry-content h2 {
+        font-size: 20px;
+      }
+    }
+
+    /* Landscape orientation (any width, height < width) */
+    @media (orientation: landscape) and (max-height: 500px) {
+      #masthead {
+        padding: 10px 0;
+      }
+
+      .site-branding h1 {
+        font-size: 14px;
+      }
+
+      .main-navigation a {
+        padding: 8px 12px;
+      }
+    }
+
+    /* Print styles */
+    @media print {
+
+      #masthead,
+      #colophon {
+        display: none;
+      }
+
+      #content {
+        background-color: #fff;
+        padding: 0;
+      }
+
+      .site-main {
+        box-shadow: none;
+        padding: 0;
+      }
+
+      a {
+        color: #000;
+      }
+    }
+    
+    .entry-content h5.will-red {
+      color: #c00;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body class="page-template-default page wp-embed-responsive wp-theme-radiate">
+
+  <div id="parallax-bg"></div>
+  <div id="page" class="hfeed site">
+    <!-- <a class="skip-link screen-reader-text" href="#content">Skip to content</a> -->
+
+    <!-- HEADER -->
+<header id="masthead" class="site-header" role="banner">
+  <div class="header-wrap clearfix">
+    <div class="site-branding">
+      <a href="/static-page/" rel="home">
+        <img src="/static-page/assets/images/臺灣福音工作全時間訓練-logo.png" alt="臺灣福音工作全時間訓練 logo">
+      </a>
+      <h1 class="site-title"><a href="/static-page/" title="臺灣福音工作全時間訓練網站" rel="home">臺灣福音工作全時間訓練網站</a></h1>
+    </div>
+
+    <!-- NAVIGATION MENU -->
+    <nav id="site-navigation" class="main-navigation" role="navigation">
+      <h4 class="menu-toggle"></h4>
+      <ul class="clearfix">
+        <!-- <li class="menu-item"><a href="/static-page/">首頁</a></li> -->
+
+        <li class="menu-item menu-item-has-children">
+          <a href="/static-page/關於訓練/">關於訓練</a>
+          <ul class="sub-menu">
+            <li class="menu-item"><a href="/static-page/訓練沿革/">訓練沿革</a></li>
+            <li class="menu-item"><a href="/static-page/訓練目的與目標/">訓練目的與目標</a></li>
+            <li class="menu-item"><a href="/static-page/課程介紹/">課程介紹</a></li>
+            <li class="menu-item menu-item-has-children">
+              <a href="/static-page/訓練生活/">訓練生活</a>
+              <ul class="sub-menu">
+                <li class="menu-item"><a href="/static-page/訓練生活/簿本操練">簿本操練</a></li>
+                <li class="menu-item"><a href="/static-page/訓練生活/#訓練生活分享">訓練生活分享</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+
+        <li class="menu-item menu-item-has-children">
+          <a href="/static-page/訓練八方面/">訓練八方面</a>
+          <ul class="sub-menu">
+            <li class="menu-item"><a href="/static-page/職事/">職事</a></li>
+            <li class="menu-item"><a href="/static-page/真理/">真理</a></li>
+            <li class="menu-item"><a href="/static-page/生命/">生命</a></li>
+            <li class="menu-item"><a href="/static-page/事奉/">事奉</a></li>
+            <li class="menu-item"><a href="/static-page/基督的身體/">基督的身體</a></li>
+            <li class="menu-item"><a href="/static-page/性格/">性格</a></li>
+            <li class="menu-item"><a href="/static-page/心志/">心志</a></li>
+            <li class="menu-item"><a href="/static-page/語言/">語言</a></li>
+          </ul>
+        </li>
+
+        <li class="menu-item"><a href="/static-page/參加訓練/">參加訓練</a></li>
+        <li class="menu-item"><a href="/static-page/參加青職短期訓練/">青職短期訓練</a></li>
+        <li class="menu-item"><a href="/static-page/參加短期訓練/">參加短期訓練</a></li>
+        <li class="menu-item"><a href="/static-page/影音專區/">影音專區</a></li>
+        <li class="menu-item"><a href="/static-page/相關資訊/">相關資訊</a></li>
+      </ul>
+    </nav>
+    <!-- #site-navigation -->
+  </div>
+  <!-- .inner-wrap header-wrap -->
+</header>
+<!-- #masthead -->
+
+    <!-- MAIN CONTENT -->
+    <div id="content" class="site-content">
+      <div class="inner-wrap clearfix">
+        <main id="main" class="site-main">
+          <article class="post page">
+            <div class="entry-content">
+              <h2 id="真理相關文章-啟示和異象的高峰神成為人人成為神">真理相關文章-啟示和異象的高峰—『神成為人，人成為神』</h2>
+
+<p>啟示和異象的高峰—『神成為人，人成為神』 這次特會的負擔很特別，尤其是那個重點：神成為人，人成為神。這是天使、世人無法測度的一個經綸，是太高、太奧、太神祕了，神祕到一個境地，叫我們不能置信在宇宙中竟然會有這一件事。我實在盼望每位與會的弟兄姊妹，這次都能看見這個大的異象。宇宙間，神、天、地、人這四件，兩件是死的、無生命的，就是天、地；還有二位是活的－神與人。我盼望大家都看見，到底神與人是個甚麼故事。 人類六千年的歷史給我們看見，有宗教、有哲學、有倫理的教導；全世界都是如此。只有主，祂給我們一本聖經；在這本聖經裏，祂給我們看見這一個大的啟示，就是神要把祂自己作得和我們人一樣。妙不妙？祂是神，卻取了人性，穿上人體，有人的生命，和人一同居住、一同生活，為要把人，就是祂所揀選的人，也作得和祂一樣。這就叫這些人，雖然是人，卻有祂那神的生命，也有祂那神的性情。在生命和性情上，人和神是同類的。因為至終，祂生了我們，我們是從祂生的。祂是神，怎樣有了我們的人性；我們是人，也照樣要有祂的神性。所以這二者，是神，卻有人性；是人，卻有神性。祂就藉着這二性、二命，把祂和人調在一起，為要使祂那神聖的生命，能藉着人性活在人中間；也是為着祂所救贖的人，能有祂的神性，在祂的神性裏，藉着祂所復活、拔高的人性，活出神的形狀來。 這最終就把神人二者作成一樣，調和在一起，而且是建造在一起。神把祂自己，藉着剛纔說的那些步驟，建造在人裏面，也把人建造在祂裏面。是祂成了這個構造，有祂作內裏的來源、元素和素質，就是內在的成分，並且和祂所救贖的人，在祂這個源頭、元素和素質–內在的成分裏，建造在一起，成了祂這個架構。這就是宇宙間的一個新人。這是以弗所四章給我們看見的。這個新人最終的完成，結果就是新耶路撒冷。新耶路撒冷是個構成，是神而人，人而神，二者構造在一起的；是神性在人性得着彰顯，是人性在神性得着榮耀。所以他們二者就互為居所，神而人者住在人而神者的裏面，那人而神者又住在神而人者的裏面，互為居所。這樣，祂那神聖的榮耀，就在人性上，顯照得光輝烈烈，燦爛赫赫。這裏一點也不包括甚麼良善或邪惡，與善惡一點關係也沒有。神的這一個經綸，絕對是在善惡之外。這經綸乃是神自己和人作成一體，成為神而人者，人而神者的一位。 弟兄姊妹們，你們都是蒙福的，能看見這個。這是太大的福氣。求主拯救你我脫離宗教，脫離哲學，脫離人生道德，完全被拯救到這個神成為人，人成為神的大異象之下。主在這裏纔能有聖徒作基督的肢體，有召會作基督的身體，有神而人者與人而神者構成的一個新造的人。結果在宇宙中，就有那永遠彰顯神的神聖榮耀，在人身上顯得光輝烈烈。我實在盼望你們諸位都能看見這個，也願意神祝福你們是無量的祝福，恩待你們是無限的恩待，也給你們祂那永永遠遠的同在，叫你們能享受這一個，為這一個作見證。我再說，願主祝福弟兄姊妹，與你們同在。阿們！－受</p>
+
+<p>摘自《經過過程之神聖三一在信徒裏的分賜、變化、並建造》</p>
+
+<h3 id="主啟示和異象的轉移達到高峰">主啟示和異象的轉移、達到高峰</h3>
+<p>主的啟示、異象在倪弟兄身上達到了基督的身體。很奇妙，他於一九五二年入監，大約就在那時候，主在臺灣開始用我。從一九五○年到今天，已經四十四年了。你們不要怪我說驕傲的話，我沒有驕傲。你們也都知道，我在這四十四年，開始在甚麼點上。我乃是開始在基督與召會。關於這兩點有好多篇現在都印成書了，有不少篇信息講到基督的身體。到了十年前多一點，大概從八○年開始，主就給我看見，要有基督的身體，非有基督的分賜不可。我就開始講基督的分賜。基督若不把祂自己分賜到我們裏面，我們怎能成為祂的身體？從那個點我就往上去，看見神的經綸。所以從八四年起，我很多篇的信息都是講神的經綸。到今年春天（其實去年我就看見了），我繼續往上講。我看見，乃是神成為人，叫人成為神，纔能產生基督的身體。這一點就是神給我們的異象的高峰。 其實『神成為人，為叫人成為神』這句話，是主後第四世紀，在三百二十五年奈西亞大會裏，亞他那修（Athanasius）所說過的。當時他是個未受注意的青年神學家。他的這句話成了召會歷史的名言。可是以後基督教的人慢慢的不僅不講這個，也不敢講這個了。 神是神，祂親自生了我們作祂的兒女。甚麼就生甚麼。你不能說羊生了羊，老羊是羊，小羊不是羊。神生了我們，我們就是神的兒女。而且到了約翰壹書三章說，神要把我們作到一個地步，和祂完全一樣。從神創造人那一天起，神的目的就是這個。所以祂創造的是人，卻有神的形像。亞當被造有神的形像，有神的樣式；而後神把生命樹擺出來，就是叫這個有神形像的人接受神作他裏面的生命。結果，這些人不是神，那他們是甚麼？但是主也給我們看得很清楚，我們乃是在生命和性情上是神。父親生兒子，這個兒子必定在生命、性情上和父親一樣。假使父親是皇帝，不能說他的兒女個個都是皇帝。兒女只有父親的生命和性情，卻沒有父親的身位，這是很清楚的。神所以這樣作，就是要為基督產生一個身體，也就是為三一神產生一個生機體，最終的出現就是新耶路撒冷。 今年二月的華語特會，弟兄們要我講，我的負擔就是要講這一點。我已經二十七年沒寫一首新詩歌。在華語特會前幾天，我就寫了一首詩歌，一共有四節：</p>
+
+<blockquote>
+  <p>一、『何大神跡！何深奧祕！神竟與人聯調為一！神成為人，人成為神，天使、世人莫測經綸；出自神的心愛美意，達到神的最高目的。』</p>
+</blockquote>
+
+<blockquote>
+  <p>二、『神成肉身，來作神人，為要使我能成為神，生命、性情與祂同類，惟我無分祂的神位；祂的屬性變我美德，祂的榮形在我顯活。』</p>
+</blockquote>
+
+<blockquote>
+  <p>三、『不再是我單獨活着，乃是神我共同生活；並與眾聖神裏配搭，建成三一宇宙之家，作祂顯身團體大器。』</p>
+</blockquote>
+
+<blockquote>
+  <p>四、『最終聖城耶路撒冷，異象、啟示集其大成。三一之神，三部分人，永世對耦是人又神；神性人性互為居所，神的榮耀在人顯赫。』</p>
+</blockquote>
+
+<p>你們唱過這首詩歌，就知道這是一首很特別的詩歌。整個基督教兩千年的歷史，沒有一首詩是這一類的。這是獨一屬於這一類的詩。這首詩歌，把神異象的高峰說得非常清楚。 今天在主的恢復裏，我們不是說不傳福音了，但傳福音是為着生；也不是說，不再餧養聖徒了；也不是說我們不教導了。一切的生、養、教都是為着建。但是我們建造甚麼？只是建造地方召會麼？不，我們建造地方召會是為着建造基督的身體，這建造的終極完成就是新耶路撒冷。那我們是不是忘記地方召會了？不是。地方召會是神達到建造基督身體的手續，神還得重重的使用地方召會。感謝主，藉着這樣的交通，我盼望我們都知道今天我們是在那裏，也知道我們該在那裏，我們該作甚麼。</p>
+
+<h3 id="神成為人人成為神">神成為人，人成為神</h3>
+<p>『神成為人，人成為神，』是神的經綸，是天使、世人所不能瞭解的。今天晚上我所要講的點，就是這個。聖經清楚的告訴我們，神來成了人，作了救主，以後又救贖了我們，重生了我們。關於這些真裏，正統的信徒、正派的教師們也都看見了。但是他們卻沒有看見，聖經記載神的經綸有一條線，給我們看見神怎樣成了人，而使人能成為神。聖經給我們看見，人怎樣能成為神，過一個神人的生活，而成為神的一個生機體，也就是基督的身體。這是他們沒有看見的。</p>
+
+<h3 id="神成為人經過創造人並親自來成為人">神成為人－經過創造人，並親自來成為人</h3>
+<p>今天晚上，我希望花一點時間，講神怎樣成為人。神要成為人，首先必須創造人。祂創造人乃是照着祂的形像和樣式造的，這是外殼。神所造的雖然是人，但是造出來的這個人卻有神的形像。這是頭一步。第二步，神就親自來作人。祂怎樣親自來作人？祂乃是進到人性裏。在身體方面說，就是進到一個童女裏面成孕。馬太一章說，神生在馬利亞里面。祂照着神創造裏的定律，在馬利亞腹中成孕九個月。祂在人性裏住了九個月，就從人性裏帶着神性生出來。生出來的這個人就是一位神而人者，也是人而神者。基督教有聖誕節，基督教有馬槽，基督教有天使報佳音。但是像我剛纔這個簡單的說法，基督教沒有看得清楚。祂這樣的一個神而人者，在地上經過了人生，過一個人的生活。祂是怎麼過的呢？祂乃是憑着祂裏面神性的生命，拒絕祂外面人性的生命，而活出一個神而人者的生活。這個神而人者的生活，裏面的實際是神的屬性，外面活出來的生活是人的美德。祂這樣過了一個神而人者的生活，成了典型。 但是神只有一個典型的人，就是一個模型還不彀，神需要一個大量的顯出。所以到末了，祂就到十字架上去。祂乃是帶着所成為的這個人上十字架，也就是穿着這個人上十字架，而把這個人釘死了。祂這個死乃是包羅萬有的死。祂這個死是墮落之人、有罪之人的死。祂成為人的時候，不是成為神所創造的人，也不是成為聖人，乃是成為神創造而墮落的人。祂的肉身是個罪的肉身，只是裏頭沒有罪的毒素，沒有罪的本質，只有罪身的形狀。所以羅馬八章三節說，祂是在罪之肉體的樣式裏出生的；祂乃是這樣的一個人。所以祂帶到十字架上去釘死的，也是這麼一個人。藉着釘死在十字架上，祂就把在舊造裏的人結束了。舊造裏的人是連帶着一切受造之物的。所以祂的死，也把一切的舊造都在十字架上了結了。舊造的人身上還有罪惡，所以祂在十字架上的死，也把罪惡除去了。這個罪人的肉體裏還藏着撒但，所以祂在十字架上的死，旣是把肉體釘死了，就也把撒但毀壞了。（來二14。）但祂不是釘死就了了，祂乃是從死裏復活了。祂怎麼復活的呢？祂乃是藉着祂神性生命的大能，帶着祂所穿的人性，也就是神所創造的那一部分，從死裏復活了。祂在復活裏，就把人性帶到神性裏。 神藉着成為肉體，把神性帶到人性裏；神也藉着復活，把人性帶到神性裏。祂把神性帶到人性裏，重要的步驟是成為肉體；而後祂在復活裏，把祂所穿上的人性又帶到神性裏。這樣，祂就把神所創造的人性提高了。神所創造的人性裏，原來是沒有神的。現在祂復活了，神所揀選一切的人也都在祂裏面復活了。復活乃是把神所創造的人性帶到神性裏，一同復活了。所以我們纔說，祂把人性拔高了。慕安得烈也有這樣的講法，但他所用的說法和我們的不同，不如我們這麼透徹。在這復活裏，祂把祂穿着的人性帶到神性裏，祂就成了神的長子。祂成為長子乃是祂在復活裏的一個出生。所以行傳十三章三十三節講論基督的復活時纔說，神說，『你是我的兒子，我今日生了你。』祂原來就是神的兒子，不過祂裏面還沒有人性。祂成為長子，不僅僅是神性作生命，祂現在乃是神性裏加上了提高的人性，乃是二性調和，而成為神的長子。這樣，祂生為長子，同時也把神所揀選的人都重生了。（彼前一３。）用我們普通的話來說，我們和主這位神的長子是一胎所生的。我們都是在基督的復活裏一同出生的。祂這個生是頭一步，作為一個基礎，使人可以成為神。如今在祂的復活裏，我們這些蒙神揀選的人，都被祂帶到神性裏。我們就藉着重生有了另一個生命。 不僅如此，這位在復活裏把人性帶到神性裏的末後亞當，又成了賜生命的靈。（林十五４５。）前這個賜生命的靈是誰？就是三一神經過種種過程的終極完成。就像你泡茶一樣。你泡茶先要有水，而後泡進茶去，最後加上檸檬，或者再加一點糖。到這時，這個茶就終極完成了。基督作神的獨生子如同白開水，到一個時候，祂把人性加進去，祂也釘死在十字架上，就多了祂死的功效的成分；祂也進入了復活，就又加上復活及其工能的成分。如今祂已經從神的獨生子變成長子，並且還帶着眾子，和祂一同生出來。 基督在祂神性的成分之外，又加上祂的人性、人生經歷、並祂死和祂復活的種種成分，就成為一個賜生命的靈。這靈就是三一神的終極完成。這靈也就是那是靈的基督，而基督又是三一神的具體化身。所以這靈就是基督，也就是三一神。最終我們的神就成了這樣的一位。從祂復活那一天起，一直到永遠，祂就永遠是這樣了。我們信主的時候，是接受這樣的一位，不像一般人所傳那淺顯的基督。我們所認識的基督是這樣深而高的。這一位就是我們的救贖主，這一位也是我們的拯救主。祂不僅是耶穌基督，祂也是在復活裏成為賜生命之靈的一位，也就是神的終極完成。就是這一位，經過了這些過程，完成了祂成為人，為要叫人成為神的步驟。</p>
+
+<h3 id="人成為神經過重生成聖更新變化模成和得榮">人成為神－經過重生、成聖、更新、變化、模成和得榮</h3>
+<p>那麼神怎樣叫人成為神呢？神用祂自己作生命把我們重生之後，就在我們裏面繼續用祂生命的靈作聖別、更新和變化的工作。神成為人，是藉着成為肉體。人成為神，是藉着變化。當主耶穌在地上作人的時候，祂曾登山改變形像。那一次的變化，是突然的變化。但是我們成為神的變化，不是突如其來的，乃是一生的變化，一直變化到模成祂的形像。最後就和祂一同進到榮耀裏，就是我們的身體得贖；那是我們全人最後一步的得贖，把我們帶進榮耀裏。我們乃是經過重生、成聖、更新、變化、模成和得榮，而成為神。到這一步，約翰壹書三章二節說，祂再顯現的時候，我們必要像祂，正如祂所是的。 這個過程的結果，就產生一個生機體。這生機體就是神與人聯合相調，把神作成人，再把人作成神。這個生機體就着三一神中間的父來說，是父的家，也就是神的家。就着三一神中間的子來說，乃是基督的身體。家是叫神有住處，身體是叫神有彰顯。最終的結果就是新耶路撒冷。這給我們看見，神怎樣成了人，以後祂也怎樣把人作成神，叫人過一個神人的生活。我們今天所過的神人的生活，就是耶穌基督在地上，經過死而復活所過的典型生活。在約翰福音裏，耶穌基督在地上的人生，是在死而復活以前的生活。我們在書信裏所過的基督徒生活，所過的神而人者的生活，是在死而復活之後生活。在復活裏，我們是天天在變化。這些神聖三一作生命的奧祕，就是在我們中間，深入的人也不多。願主憐憫我們。我盼望藉着這些交通的話，我們都能看見這個異象，並且追求進入這個異象的實際。</p>
+
+<p>摘自《異象的高峰與基督身體的實際》</p>
+
+            </div>
+          </article>
+        </main>
+      </div>
+    </div>
+    <!-- #content -->
+
+    <!-- FOOTER -->
+<footer id="colophon" class="site-footer" role="contentinfo">
+  <div class="site-info">
+    <div class="copyright">
+      Copyright &copy; 2025
+      <a href="/" title="臺灣福音工作全練網站">
+        <span>臺灣福音工作全時間訓練網站</span>
+      </a>
+      <br>
+      All rights reserved. | Static Jekyll site converted from original WordPress site
+    </div>
+  </div>
+</footer>
+<!-- #colophon -->
+
+    <a href="#masthead" id="scroll-up"><span class="genericon genericon-collapse"></span></a>
+  </div>
+  <!-- #page -->
+
+  <script src="/static-page/assets/js/main.js"></script>
+
+</body>
+
+</html>
