@@ -21,4 +21,4 @@ title: 心志 – 臺灣福音工作全時間訓練網站
 
 能彀「在那裏」，與一班童女共同將愛獻給祂，是一件再榮耀不過的事了。
 
-![心志](/assets/images/心志.png)
+![心志]({{ site.baseurl }}/assets/images/心志.png)

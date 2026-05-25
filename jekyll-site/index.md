@@ -3,7 +3,7 @@ layout: default
 title: 首頁
 ---
 
-![畢業合照.jpg](/assets/images/畢業合照.jpg)
+![畢業合照.jpg]({{ site.baseurl }}/assets/images/畢業合照.jpg)
 
 ## 2024 年國際華語相調特會 FTTT 簡介影片
 
