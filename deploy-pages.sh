@@ -11,9 +11,13 @@ set -e
 
 cd "$(dirname "$0")" || exit 1
 
-# Always rebuild before deploy to avoid publishing stale routes.
-echo "Building latest GitHub Pages output..."
-./build-pages.sh
+# Check if _site exists and has been built
+if [ ! -f "_site/index.html" ]; then
+    echo "⚠️  _site/ not found or not built"
+    echo ""
+    echo "Building now..."
+    ./build-pages.sh
+fi
 
 echo ""
 echo "=================================="
@@ -22,12 +26,12 @@ echo "=================================="
 echo ""
 
 # Fix image paths in content: prefix /assets/ and /wp-content/ with /static-page
-# echo "Fixing image paths..."
-# find _site -name "*.html" -exec sed -i '' 's|src="/assets/|src="/static-page/assets/|g' {} \;
-# find _site -name "*.html" -exec sed -i '' 's|src="/wp-content/|src="/static-page/wp-content/|g' {} \;
-# find _site -name "*.html" -exec sed -i '' 's|src="/static-page//|src="/static-page/|g' {} \;
+echo "Fixing image paths..."
+find _site -name "*.html" -exec sed -i '' 's|src="/assets/|src="/static-page/assets/|g' {} \;
+find _site -name "*.html" -exec sed -i '' 's|src="/wp-content/|src="/static-page/wp-content/|g' {} \;
+find _site -name "*.html" -exec sed -i '' 's|src="/static-page//|src="/static-page/|g' {} \;
 
-# echo ""
+echo ""
 
 # Deploy to gh-pages branch
 ghp-import -n -p -f _site
