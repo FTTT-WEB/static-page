@@ -1,3 +1,14 @@
+/* 懸掛縮排：用於 壹貳叁 等子項目 */
+.hanging {
+  padding-left: 2em;
+  text-indent: -2em;
+}
+
+.hanging-3 {
+  padding-left: 3em;
+  text-indent: -3em;
+}
+
 /* ===========================
    Multi-level menu behavior
    1st level: dropdown DOWN
