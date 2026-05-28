@@ -1,6 +1,7 @@
 ---
 layout: default
 title: 首頁
+hero_image: /assets/images/畢業合照.jpg
 ---
 
 ![畢業合照.jpg]({{ site.baseurl }}/assets/images/畢業合照.jpg)

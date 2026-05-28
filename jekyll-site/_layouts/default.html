@@ -56,7 +56,8 @@
       background-color: #fff;
       padding: 15px 0;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      position: relative;
+      position: sticky;
+      top: 0;
       z-index: 100;
       width: 100%;
     }
@@ -511,6 +512,95 @@
       color: #c00;
       text-align: center;
     }
+
+    /* =============== HERO BANNER =============== */
+    .hero-banner {
+      width: 100%;
+      line-height: 0;
+      overflow: hidden;
+    }
+
+    .hero-banner img {
+      width: 100%;
+      height: auto;
+      display: block;
+      margin: 0;
+      border-radius: 0;
+    }
+
+    /* =============== HAMBURGER MENU =============== */
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      cursor: pointer;
+      padding: 8px 12px;
+      font-size: 22px;
+      color: #333;
+      line-height: 1;
+      order: 2;
+      margin-left: auto;
+      flex-shrink: 0;
+    }
+
+    .menu-toggle:hover {
+      background-color: #f5f5f5;
+    }
+
+    @media (max-width: 767px) {
+      .header-wrap {
+        flex-wrap: wrap;
+        align-items: center;
+      }
+
+      .site-branding {
+        order: 1;
+      }
+
+      .menu-toggle {
+        display: block;
+        order: 2;
+      }
+
+      #site-navigation {
+        display: none;
+        order: 3;
+        flex: 1 1 100%;
+        width: 100%;
+      }
+
+      #site-navigation.nav-open {
+        display: block;
+      }
+
+      .main-navigation ul {
+        flex-direction: column;
+      }
+
+      .main-navigation > ul > li {
+        border-right: none;
+        border-bottom: 1px solid #eee;
+      }
+
+      .main-navigation .sub-menu {
+        position: static !important;
+        display: none;
+        box-shadow: none !important;
+        border: none !important;
+        background: #f9f9f9;
+        padding-left: 15px;
+        min-width: 0 !important;
+      }
+
+      .main-navigation li:hover > .sub-menu {
+        display: none;
+      }
+
+      .main-navigation .sub-menu.sub-menu-open {
+        display: block !important;
+      }
+    }
   </style>
 </head>
 
@@ -521,6 +611,12 @@
     <!-- <a class="skip-link screen-reader-text" href="#content">Skip to content</a> -->
 
     {% include header.html %}
+
+    {% if page.hero_image %}
+    <div class="hero-banner">
+      <img src="{{ site.baseurl }}{{ page.hero_image }}" alt="">
+    </div>
+    {% endif %}
 
     <!-- MAIN CONTENT -->
     <div id="content" class="site-content">
