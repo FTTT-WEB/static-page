@@ -1,5 +1,12 @@
 # GitHub Pages configuration
 # Use with: bundle exec jekyll build --config _config.yml,_config.pages.yml
-# This configuration sets baseurl to /static-page for GitHub Pages subdirectory deployment
+#
+# Set baseurl (read by scripts as PATH_PREFIX) for the deployment target:
+#   baseurl: /static-page   → https://fttt-web.github.io/static-page/
+#   baseurl: ""             → https://www.fttt.org.tw/ (custom domain at site root)
+#
+# Or override per run without editing this file:
+#   PATH_PREFIX="" ./build-pages.sh
+#   PATH_PREFIX=/static-page ./build-pages.sh
 
 baseurl: /static-page

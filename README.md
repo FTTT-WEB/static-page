@@ -1,459 +1,51 @@
 # FTTT 訓練中心網站
 
-靜態 Jekyll 網站，由 WordPress 遷移而來。使用 Markdown 管理內容，支援本地開發和 GitHub Pages 部署。
+由 WordPress 遷移而來的 Jekyll 靜態網站。
 
-**目錄**
-1. [快速開始](#快速開始)
-2. [專案架構](#專案架構)
-3. [開發指南](#開發指南)
-4. [測試與部署](#測試與部署)
+## 專案結構
 
----
+- `jekyll-site/`：網站原始碼、資源與部署腳本
+- `scripts/`：遷移及內容轉換工具
+- `docs/`：遷移與部署的歷史文件
 
-## 快速開始
+網站操作細節請見 [`jekyll-site/README.md`](jekyll-site/README.md)。
 
-### 系統需求
-
-- Ruby 3.1+ (建議使用 rbenv 管理)
-- ghp-import (建議使用 pipx 安裝)
-- Git
-
-### 環境配置
-
-#### macOS
-
-使用 Homebrew 和 rbenv 安裝 Ruby：
+## 開始使用
 
 ```bash
-# 1. 安裝 rbenv 和 ruby-build
-brew install rbenv ruby-build
-
-# 2. 初始化 rbenv
-echo 'eval "$(rbenv init - zsh)"' >> ~/.zshrc
-source ~/.zshrc
-
-# 3. 安裝 Ruby 3.1+
-rbenv install 3.1.0
-rbenv global 3.1.0
-
-# 4. 驗證安裝
-ruby --version
-```
-
-#### WSL/Ubuntu
-
-使用 Git 和手動配置安裝 Ruby：
-
-```bash
-# 1. 複製 rbenv 和 ruby-build
-git clone https://github.com/rbenv/rbenv.git ~/.rbenv
-git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
-
-# 2. 設定環境變數
-echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
-echo 'eval "$(rbenv init - bash)"' >> ~/.bashrc
-source ~/.bashrc
-
-# 3. 安裝 Ruby 3.1+
-rbenv install 3.1.0
-rbenv global 3.1.0
-
-# 4. 驗證安裝
-ruby --version
-```
-
-### 專案初始化
-
-```bash
-# 1. 複製專案
-git clone https://github.com/FTTT-WEB/static-page.git
-cd static-page/jekyll-site
-
-# 2. 安裝依賴
+cd jekyll-site
 bundle install
-
-# 3. 準備完成！
+pip install ghp-import
+./deploy-local.sh
 ```
 
-### 安裝 ghp-import（部署工具）
+本地網站：<http://localhost:4000/>
 
-`ghp-import` 是用於自動化部署到 GitHub Pages 的工具。使用 `pipx` 安裝能隔離其依賴環境。
+## 部署
 
-#### 前置要求
-
-- Python 3.6+（macOS 和 Ubuntu 通常預裝）
-- `pipx`（Python 應用程式管理工具）
-
-#### 安裝步驟
-
-##### 步驟 1：安裝 pipx
-
-**macOS：**
-```bash
-brew install pipx
-pipx ensurepath
-```
-
-**WSL/Ubuntu：**
-```bash
-python3 -m pip install --user pipx
-export PATH="$HOME/.local/bin:$PATH"
-echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc
-source ~/.bashrc
-```
-
-##### 步驟 2：使用 pipx 安裝 ghp-import
+`PATH_PREFIX` 決定網站部署路徑；建置和部署時應使用相同值：
 
 ```bash
-pipx install ghp-import
+# https://www.fttt.org.tw/
+PATH_PREFIX="" ./build-pages.sh
+PATH_PREFIX="" ./deploy-pages.sh
+
+# https://fttt-web.github.io/static-page/
+PATH_PREFIX=/static-page ./build-pages.sh
+PATH_PREFIX=/static-page ./deploy-pages.sh
 ```
 
-##### 步驟 3：驗證安裝
+若未設定 `PATH_PREFIX`，腳本會使用 `_config.pages.yml` 的 `baseurl`。
 
-```bash
-ghp-import --version
-```
+## 編輯內容
 
-應該看到類似輸出：`ghp-import 2.x.x`
+- 頁面：`jekyll-site/` 下的 Markdown 檔案
+- 導覽：`jekyll-site/_includes/header.html`
+- 樣式：`jekyll-site/assets/css/main.css`
+- 圖片：`jekyll-site/assets/images/`
 
----
-
-## 專案架構
-
-```
-static-page/
-├── jekyll-site/                    # Jekyll 網站主目錄
-│   ├── _config.yml                 # 基礎配置
-│   ├── _config.local.yml           # 本地開發配置 (baseurl: "")
-│   ├── _config.pages.yml           # GitHub Pages 配置 (baseurl: /static-page)
-│   │
-│   ├── _layouts/
-│   │   └── default.html            # 主頁面模板（包含 header、footer、CSS）
-│   │
-│   ├── _includes/
-│   │   ├── header.html             # 頁面頭部（導航選單）
-│   │   └── footer.html             # 頁面底部（版權資訊）
-│   │
-│   ├── assets/
-│   │   ├── css/
-│   │   │   └── main.css            # 主樣式表
-│   │   ├── js/
-│   │   │   └── main.js             # 主 JavaScript
-│   │   └── images/                 # 所有圖片（logo、頁面圖片等）
-│   │
-│   ├── *.md                        # 根層頁面內容（Markdown 格式）
-│   │   ├── index.md                # 首頁
-│   │   ├── 參加訓練.md
-│   │   ├── 參加短期訓練.md
-│   │   ├── 參加青職短期訓練.md
-│   │   ├── 影音專區.md
-│   │   ├── 相關資訊.md
-│   │   ├── 語言.md
-│   │   └── 訓練中心聯絡方式.md
-│   │
-│   ├── 關於訓練/
-│   │   ├── index.md                # 關於訓練概覽
-│   │   ├── 訓練沿革.md
-│   │   ├── 訓練目的與目標.md
-│   │   ├── 課程介紹.md
-│   │   └── 訓練生活/
-│   │       ├── index.md            # 訓練生活概覽
-│   │       └── 簿本操練.md
-│   │
-│   ├── 訓練八方面/
-│   │   ├── index.md                # 八方面訓練總覽
-│   │   │
-│   │   ├── 職事/
-│   │   │   ├── index.md            # 職事概覽
-│   │   │   ├── 職事_職事的構成.md
-│   │   │   ├── 職事_職事的重要.md
-│   │   │   ├── 職事_宇宙中獨一無二的新約職事.md
-│   │   │   └── 職事_訓練的需要.md
-│   │   │
-│   │   ├── 真理/
-│   │   │   ├── index.md            # 真理概覽
-│   │   │   ├── 真理_聖經中關於真理的啟示.md
-│   │   │   ├── 真理_被神聖真理的構成.md
-│   │   │   ├── 真理_啟示和異象的高峰.md
-│   │   │   └── 真理_訓練的需要.md
-│   │   │
-│   │   ├── 生命/
-│   │   │   ├── index.md            # 生命概覽
-│   │   │   ├── 生命_生命的認識.md
-│   │   │   ├── 生命_對於生命的經歷.md
-│   │   │   ├── 生命_對神生機救恩完滿的經歷.md
-│   │   │   └── 生命_訓練的需要.md
-│   │   │
-│   │   ├── 事奉/
-│   │   │   └── index.md            # 事奉概覽
-│   │   │
-│   │   ├── 基督的身體/
-│   │   │   ├── index.md            # 基督的身體概覽
-│   │   │   ├── 基督的身體_訓練的需要.md
-│   │   │   ├── 基督身體_基督的身體是召會的內在意義.md
-│   │   │   ├── 基督身體_基督身體的實際.md
-│   │   │   └── 基督身體_基督身體的構成與建造.md
-│   │   │
-│   │   ├── 性格/
-│   │   │   ├── index.md            # 性格概覽
-│   │   │   ├── 性格_事奉主者的人格.md
-│   │   │   ├── 性格_性格的重要.md
-│   │   │   ├── 性格_訓練的需要.md
-│   │   │   └── 性格_關於性格的要點.md
-│   │   │
-│   │   ├── 心志/
-│   │   │   └── index.md            # 心志概覽
-│   │   │
-│   │   └── 語言/
-│   │       └── index.md            # 語言課程概覽
-│   │
-│   ├── build-local.sh              # 本地開發建置腳本
-│   ├── build-pages.sh              # GitHub Pages 建置腳本
-│   ├── deploy-local.sh             # 本地開發 + 啟動伺服器
-│   └── deploy-pages.sh             # GitHub Pages 建置 + 部署
-│
-├── page_backups/                   # 舊版 HTML 頁面備份
-└── README.md                       # 本檔案
-```
-
-### 配置檔說明
-
-| 檔案 | 用途 | baseurl |
-|------|------|---------|
-| `_config.yml` | 共通設定 | - |
-| `_config.local.yml` | 本地開發覆蓋 | `""` (無) |
-| `_config.pages.yml` | GitHub Pages 覆蓋 | `/static-page` |
-
-Jekyll 會自動合併配置檔，選定的配置會覆蓋基礎設定。
-
----
-
-## 開發指南
-
-### 建立新頁面
-
-#### 步驟 1：建立 Markdown 檔案
-
-在 `jekyll-site/` 目錄（根目錄）建立新的 `.md` 檔案：
-
-```bash
-# 例如：
-touch 新頁面名稱.md
-```
-
-**檔案命名規則：**
-- 使用繁體中文或英文
-- 避免特殊字元（`?`, `#`, `&` 等）
-- 檔案名稱會成為網址的一部分
-
-#### 步驟 2：加入 Front Matter
-
-在檔案開頭加入 YAML 前置資料：
+內部連結及圖片應包含 Jekyll 路徑前綴：
 
 ```markdown
----
-layout: default
-title: 頁面標題
----
-
-# 頁面主標題
-
-這是您的內容...
+![圖片說明]({{ site.baseurl }}/assets/images/檔名.png)
 ```
-
-**Front Matter 說明：**
-- `layout: default` - 使用預設頁面模板（必須）
-- `title:` - 頁面標題，顯示在瀏覽器標籤和 meta 標籤中
-
-#### 步驟 3：撰寫內容
-
-使用 Markdown 語法撰寫頁面內容：
-
-```markdown
-# 一級標題
-
-## 二級標題
-
-### 三級標題
-
-**粗體文字** 和 *斜體文字*
-
-- 項目 1
-- 項目 2
-
-1. 第一項
-2. 第二項
-
-[連結文字](https://example.com)
-
-![圖片說明](/assets/images/檔名.png)
-
-> 引用文字
-
-| 欄位 1 | 欄位 2 |
-|--------|--------|
-| 資料 1 | 資料 2 |
-```
-
-#### 步驟 4：加入導航選單（選用）
-
-編輯 `jekyll-site/_includes/header.html`，在適當位置加入新選單項目：
-
-```html
-<li class="menu-item"><a href="{{ site.baseurl }}/頁面名稱/">頁面顯示名稱</a></li>
-```
-
-範例（新增副選單項目）：
-```html
-<li class="menu-item menu-item-has-children">
-  <a href="{{ site.baseurl }}/父頁面/">父頁面</a>
-  <ul class="sub-menu">
-    <li class="menu-item"><a href="{{ site.baseurl }}/子頁面/">子頁面</a></li>
-  </ul>
-</li>
-```
-
-### 更新頁面內容
-
-1. 編輯對應的 `.md` 檔案
-2. 保存後，本地伺服器會自動重新構建
-3. 刷新瀏覽器查看變更
-
-### 更新頁面樣式和布局
-
-#### 修改 CSS
-
-編輯 `jekyll-site/assets/css/main.css`（全站樣式）或 `jekyll-site/_layouts/default.html` 中的 `<style>` 區塊（內聯樣式）。
-
-#### 修改 HTML 布局
-
-- **頁面結構：** 編輯 `jekyll-site/_layouts/default.html`
-- **頁面頭部：** 編輯 `jekyll-site/_includes/header.html`
-- **頁面底部：** 編輯 `jekyll-site/_includes/footer.html`
-
-修改後執行本地測試（見下一節）。
-
-### 管理圖片
-
-1. 將圖片放在 `jekyll-site/assets/images/` 目錄
-2. 在 Markdown 中引用：
-   ```markdown
-   ![圖片說明](/assets/images/檔名.png)
-   ```
-3. 支援格式：PNG、JPG、GIF、SVG 等
-
-### 嵌入 YouTube 影片
-
-在 Markdown 中使用 iframe：
-
-```html
-<iframe width="100%" height="480"
-  src="https://www.youtube.com/embed/影片ID"
-  title="影片標題"
-  frameborder="0"
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-  referrerpolicy="strict-origin-when-cross-origin"
-  allowfullscreen>
-</iframe>
-```
-
----
-
-## 測試與部署
-
-### 本地開發
-
-#### 方法 1：快速啟動（建議）
-
-```bash
-cd jekyll-site
-bash deploy-local.sh
-```
-
-這會執行以下操作：
-1. 使用本地配置構建站點（`baseurl` 為空）
-2. 啟動 Jekyll 開發伺服器
-
-然後訪問：`http://localhost:4000/`
-
-#### 方法 2：分步操作
-
-```bash
-cd jekyll-site
-
-# 僅構建（不啟動伺服器）
-bash build-local.sh
-
-# 啟動伺服器
-bundle exec jekyll serve --config _config.yml,_config.local.yml
-```
-
-#### 監看檔案變更
-
-啟動伺服器後，任何檔案變更都會自動重新構建。刷新瀏覽器查看。
-
-### GitHub Pages 部署
-
-#### 前置準備
-
-- 確保 repository 名稱為 `static-page`
-- 確保 GitHub Pages 設定為 `gh-pages` 分支
-- 已安裝 `ghp-import`（見[安裝 ghp-import](#安裝-ghp-import部署工具)）
-- GitHub 帳戶有 repository 的寫入權限
-
-#### 部署步驟
-
-```bash
-cd jekyll-site
-
-# 方法 1：一鍵部署（推薦）
-bash deploy-pages.sh
-
-# 方法 2：分步操作
-bash build-pages.sh              # 使用 /static-page baseurl 構建
-# 手動審查 _site/ 目錄
-ghp-import -n -p -f _site        # 部署到 gh-pages 分支
-```
-
-部署後訪問：`https://fttt-web.github.io/static-page/`
-
-### 構建腳本說明
-
-| 腳本 | 用途 | baseurl | 伺服器 |
-|------|------|---------|--------|
-| `build-local.sh` | 本地構建 | `` (空) | ❌ |
-| `deploy-local.sh` | 本地開發 | `` (空) | ✅ |
-| `build-pages.sh` | GitHub Pages 構建 | `/static-page` | ❌ |
-| `deploy-pages.sh` | GitHub Pages 部署 | `/static-page` | ❌ |
-
-### 常見問題
-
-**Q: 為什麼本地和 GitHub Pages 需要不同的 baseurl？**
-
-A: 本地開發時網站在根目錄 (`http://localhost:4000/`)，但 GitHub Pages 在子目錄 (`https://fttt-web.github.io/static-page/`)。不同的 baseurl 確保所有路徑（CSS、JS、圖片、連結）都能正確加載。
-
-**Q: 修改後頁面沒有變更？**
-
-A:
-1. 確認本地伺服器正在運行
-2. 檢查終端是否有構建錯誤
-3. 強制刷新瀏覽器（Cmd+Shift+R 或 Ctrl+Shift+R）
-4. 檢查檔案編碼為 UTF-8
-
-**Q: 如何預覽部署到 GitHub Pages 後的效果？**
-
-A:
-```bash
-bash build-pages.sh
-bundle exec jekyll serve --config _config.yml,_config.pages.yml --baseurl /static-page
-```
-
-然後訪問 `http://localhost:4000/static-page/`
-
----
-
-## 參考資源
-
-- [Jekyll 官方文件](https://jekyllrb.com/docs/)
-- [Markdown 語法指南](https://guides.github.com/features/mastering-markdown/)
-- [GitHub Pages 說明](https://docs.github.com/en/pages)
