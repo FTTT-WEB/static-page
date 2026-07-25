@@ -1,7 +1,7 @@
 ---
 layout: default
 title: 首頁
-hero_image: /assets/images/畢業合照.jpg
+hero_image: /assets/images/畢業合照.png
 ---
 
 ## 2024 年國際華語相調特會 FTTT 簡介影片
