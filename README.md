@@ -37,6 +37,9 @@ PATH_PREFIX=/static-page ./deploy-pages.sh
 
 若未設定 `PATH_PREFIX`，腳本會使用 `_config.pages.yml` 的 `baseurl`。
 
+根網域部署會寫入 `CNAME` 檔案（`www.fttt.org.tw`），確保每次強制推送後 GitHub Pages
+自訂網域不會被重設。可用 `PAGES_DOMAIN=example.org` 覆寫。
+
 ## 編輯內容
 
 - 頁面：`jekyll-site/` 下的 Markdown 檔案
