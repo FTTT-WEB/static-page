@@ -31,6 +31,9 @@ PATH_PREFIX=/static-page ./deploy-pages.sh
 
 If `PATH_PREFIX` is unset, scripts use `baseurl` from `_config.pages.yml`.
 
+The root-domain deploy writes a `CNAME` file (`www.fttt.org.tw`) so the GitHub Pages
+custom domain survives each force-push. Override with `PAGES_DOMAIN=example.org`.
+
 ## Content
 
 - Pages: Markdown files in this directory and its content subdirectories
