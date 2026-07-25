@@ -9,4 +9,4 @@
 #   PATH_PREFIX="" ./build-pages.sh
 #   PATH_PREFIX=/static-page ./build-pages.sh
 
-baseurl: /static-page
+baseurl: ""
